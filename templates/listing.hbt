@@ -1,14 +1,20 @@
 {{> header}}
 
-    {{{ contents }}}
+    <div class="tier">
+        <div class="wrapper">
 
-    <ul>
-    {{#each collections.articles}}
-        <li>
-            <h2>{{ this.title }}</h2>
-            <div>Posted {{ formatDate this.date }}</div>
-        </li>
-    {{/each}}
-    </ul>
+            {{{ contents }}}
+
+            <ul>
+            {{#each collections.articles}}
+                <li>
+                    <h2>{{ this.title }}</h2>
+                    <div>Posted {{ formatDate this.date }}</div>
+                </li>
+            {{/each}}
+            </ul>
+
+        </div>
+    </div>
 
 {{> footer}}
