@@ -297,6 +297,43 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+ Layout Module - Post
+------------------------------------------------------------------------ */
+.post-hd {
+    margin-bottom: $VR_STANDARD;
+}
+
+.post-media {
+    margin-bottom: $VR_STANDARD;
+}
+
+/* ---------------------------------------------------------------------
+ Content Module - Heading
+------------------------------------------------------------------------ */
+.hdg {
+    font-size: $FONT_SIZE_LG;
+    line-height: $LINE_HEIGHT_CONDENSED;
+    font-family: $FONT_FAMILY_SANS_SERIF_BOLD;
+    font-weight: normal;
+}
+
+@include breakpoint(SM) {
+        .hdg_1 {
+            font-size: $FONT_SIZE_XL;
+        }
+    }
+
+    @include breakpoint(MD) {
+        .hdg_1 {
+            font-size: $FONT_SIZE_XXL;
+        }
+
+        .hdg_2 {
+            font-size: $FONT_SIZE_XL;
+        }
+    }
+
+/* ---------------------------------------------------------------------
  Content Module - User Content
 ------------------------------------------------------------------------ */
 .userContent {

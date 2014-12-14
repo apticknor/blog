@@ -30,10 +30,10 @@ var findTemplate = function(config) {
 Metalsmith(__dirname)
     .use(collections({
         pages: {
-            pattern: 'content/pages/*.md'
+            pattern: 'content/pages/**/*.md'
         },
         posts: {
-            pattern: 'content/posts/*.md',
+            pattern: 'content/posts/**/*.md',
             sortBy: 'date',
             reverse: true
         }
