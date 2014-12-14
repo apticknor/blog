@@ -2,6 +2,7 @@ var Metalsmith      = require('metalsmith'),
     markdown        = require('metalsmith-markdown'),
     templates       = require('metalsmith-templates'),
     collections     = require('metalsmith-collections'),
+    permalinks      = require('metalsmith-permalinks'),
     sass            = require('metalsmith-sass'),
     uglify          = require('metalsmith-uglify'),
     Handlebars      = require('handlebars');
@@ -22,6 +23,7 @@ Metalsmith(__dirname)
             header: "partials/header"
         }
     }))
+    .use(permalinks())
     .use(sass({
         outputStyle: 'compressed'
     }))
