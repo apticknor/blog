@@ -18,6 +18,7 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^0.5.0",
     "metalsmith-templates": "^0.6.0",
-    "metalsmith-uglify": "0.0.6"
+    "metalsmith-uglify": "0.0.6",
+    "moment": "^2.8.4"
   }
 }

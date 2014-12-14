@@ -5,8 +5,15 @@ var Metalsmith      = require('metalsmith'),
     permalinks      = require('metalsmith-permalinks'),
     sass            = require('metalsmith-sass'),
     uglify          = require('metalsmith-uglify'),
-    Handlebars      = require('handlebars');
+    Handlebars      = require('handlebars'),
+    moment          = require('moment');
 
+// Handlebars
+Handlebars.registerHelper('formatDate', function(date) {
+    return moment(date).format('MM-DD-YYYY');
+});
+
+// MetalSmith
 Metalsmith(__dirname)
     .use(collections({
         articles: {
