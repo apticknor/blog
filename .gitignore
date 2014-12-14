@@ -12,9 +12,9 @@ Thumbs.db
 .sass-cache/
 node_modules/
 
-# Config Files #
+# Build Files #
 ####################
-
+_build/
 
 # Other #
 ####################

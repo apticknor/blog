@@ -1,0 +1,22 @@
+{
+  "name": "AnthonyTicknor.com",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Anthony Ticknor <tony.ticknor@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apticknor/blog"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "metalsmith": "^0.6.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-templates": "^0.4.0",
+    "handlebars": "^2.0.0-alpha.2",
+    "metalsmith-collections": "^0.4.0",
+    "metalsmith-permalinks": "^0.3.0",
+    "metalsmith-sass": "^0.1.1"
+  }
+}
