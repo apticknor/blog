@@ -1,0 +1,13 @@
+# secure htaccess file
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+
+# start rewrites
+RewriteEngine On
+RewriteBase "/"
+
+# remove www
+RewriteCond %{HTTP_HOST} !^anthonyticknor.com$ [NC]
+RewriteRule ^(.*)$ http://anthonyticknor.com/$1 [L,R=301]
