@@ -43,7 +43,7 @@ Metalsmith(__dirname)
     .use(markdown())
     .use(permalinks({
         pattern: ':date/:title',
-        date: 'YYYY'
+        date: 'YYYY/MM'
     }))
     .use(templates('handlebars'))
     .use(sass({
