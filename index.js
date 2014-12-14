@@ -4,6 +4,7 @@ var Metalsmith  = require('metalsmith'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
     sass        = require('metalsmith-sass'),
+    uglify      = require('metalsmith-uglify'),
     Handlebars  = require('handlebars'),
     fs          = require('fs');
 
@@ -50,6 +51,7 @@ Metalsmith(__dirname)
     .use(sass({
         outputStyle: 'compressed'
     }))
+    .use(uglify())
     .destination('./_build')
     .build(function(err, files) {
         if (err) { throw err; }

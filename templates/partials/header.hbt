@@ -11,7 +11,7 @@
         <link rel="stylesheet" media="screen, projection" href="/styles/app.css" />
         <!-- SCRIPTS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="/scripts/app.js"></script>
+        <script src="/scripts/app.min.js"></script>
     </head>
     <body>
 

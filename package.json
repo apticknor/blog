@@ -11,12 +11,13 @@
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
-    "metalsmith": "^0.6.0",
-    "metalsmith-markdown": "^0.2.1",
-    "metalsmith-templates": "^0.4.0",
     "handlebars": "^2.0.0-alpha.2",
+    "metalsmith": "^0.6.0",
     "metalsmith-collections": "^0.4.0",
+    "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.3.0",
-    "metalsmith-sass": "^0.1.1"
+    "metalsmith-sass": "^0.1.1",
+    "metalsmith-templates": "^0.4.0",
+    "metalsmith-uglify": "0.0.6"
   }
 }
