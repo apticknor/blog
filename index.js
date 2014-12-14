@@ -13,6 +13,15 @@ Handlebars.registerHelper('formatDate', function(date) {
     return moment(date).format('MM-DD-YYYY');
 });
 
+Handlebars.registerHelper('checkYear', function(expectedYear, postDate, options) {
+    formattedPostYear = moment(postDate).format('YYYY');
+    if (formattedPostYear != expectedYear) {
+        return options.inverse(this);
+    } else {
+        return options.fn(this);
+    }
+});
+
 // MetalSmith
 Metalsmith(__dirname)
     .use(collections({
