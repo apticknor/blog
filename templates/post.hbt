@@ -4,17 +4,17 @@
             <div class="wrapper">
                 <div class="post">
                     <div class="post-hd">
-                        <h2 class="hdg hdg_2">{{title}}</h2>
+                        <h2 class="hdg hdg_2">{{ title }}</h2>
                     </div>
                     <div class="post-meta">
-                        {{date}}
+                        {{ formatDate date }}
                     </div>
                     <div class="post-media">
                         <img src="{{image}}" alt="{{title}}" />
                     </div>
                     <div class="post-bd">
                         <div class="userContent">
-                            {{{contents}}}
+                            {{{ contents }}}
                         </div>
                     </div>
                 </div>
