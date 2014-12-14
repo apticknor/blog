@@ -30,9 +30,6 @@ var findTemplate = function(config) {
 
 Metalsmith(__dirname)
     .use(collections({
-        pages: {
-            pattern: 'content/pages/**/*.md'
-        },
         posts: {
             pattern: 'content/posts/**/*.md',
             sortBy: 'date',
@@ -45,7 +42,8 @@ Metalsmith(__dirname)
     }))
     .use(markdown())
     .use(permalinks({
-        pattern: ':collection/:title'
+        pattern: ':date/:title',
+        date: 'YYYY'
     }))
     .use(templates('handlebars'))
     .use(sass({

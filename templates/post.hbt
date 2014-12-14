@@ -6,6 +6,9 @@
                     <div class="post-hd">
                         <h2 class="hdg hdg_2">{{title}}</h2>
                     </div>
+                    <div class="post-meta">
+                        {{date}}
+                    </div>
                     <div class="post-media">
                         <img src="{{image}}" alt="{{title}}" />
                     </div>

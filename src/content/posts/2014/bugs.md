@@ -8,7 +8,7 @@ So today at work I bumped up against a particularly nasty bug. No it’s not a p
 
 Here’s what I’m seeing.
 
-[chrome displaying a double vertical scrollbar](/images/double-scrollbar.png)
+[![chrome displaying a double vertical scrollbar](/images/double-scrollbar.png)](/images/double-scrollbar.png)
 
 Notice the double vertical scrollbar.
 
