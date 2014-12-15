@@ -5,7 +5,7 @@ template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/retina-double-scrollbar-bug/"
 date: 2014-03-24
 image: "/images/desk.jpg"
-thumbnail: ""
+thumbnail: "/images/desk_thumb.jpg"
 excerpt: ""
 ---
 
