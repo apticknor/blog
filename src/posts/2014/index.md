@@ -1,7 +1,5 @@
 ---
-title: "2014 Archive"
+title: "2014"
 template: listing.hbt
 archiveYear: 2014
 ---
-
-# 2014 Archive

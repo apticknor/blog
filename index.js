@@ -1,3 +1,6 @@
+// --------------------------------------
+// Setup
+// --------------------------------------
 var Metalsmith      = require('metalsmith'),
     markdown        = require('metalsmith-markdown'),
     templates       = require('metalsmith-templates'),
@@ -8,11 +11,18 @@ var Metalsmith      = require('metalsmith'),
     Handlebars      = require('handlebars'),
     moment          = require('moment');
 
+// --------------------------------------
 // Handlebars
+// --------------------------------------
+
+// date formatting helper that formats dates consistently using moment.js
+// usage: {{ formatDate date }}
 Handlebars.registerHelper('formatDate', function(date) {
     return moment(date).format('MM-DD-YYYY');
 });
 
+// year checking helper for use with listings that should be limited to a specific year
+// usage: {{#checkYear archiveYear date}} ... {{/checkYear}}
 Handlebars.registerHelper('checkYear', function(expectedYear, postDate, options) {
     formattedPostYear = moment(postDate).format('YYYY');
     if (formattedPostYear != expectedYear) {
@@ -22,7 +32,9 @@ Handlebars.registerHelper('checkYear', function(expectedYear, postDate, options)
     }
 });
 
-// MetalSmith
+// --------------------------------------
+// Metalsmith
+// --------------------------------------
 Metalsmith(__dirname)
     .use(collections({
         articles: {

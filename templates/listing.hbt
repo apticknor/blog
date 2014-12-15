@@ -3,7 +3,7 @@
     <div class="tier">
         <div class="wrapper">
 
-            {{{ contents }}}
+            <h1>{{ archiveYear }}</h1>
 
             <ul>
             {{#each collections.articles}}
