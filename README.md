@@ -44,7 +44,7 @@ A theme for the [Metalsmith](http://www.metalsmith.io/) static site generator.
 * thumbnail
   * @description: the article thumbnail image
   * @usage: displayed as a thumbnail of the article on pages where the article is mentioned
-  * @requirement: 600px x 480px
+  * @requirement: 600px x 460px
 * excerpt
   * @description: the article excerpt
   * @usage: displayed as a summary of the article on pages where the article is mentioned
