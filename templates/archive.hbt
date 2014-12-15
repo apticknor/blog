@@ -3,31 +3,35 @@
     <div class="tier">
         <div class="wrapper">
 
-            <h1>Archive</h1>
+            <h1 class="hdg hdg_2">Archive</h1>
 
 {{!--
-            <h2>2015</h2>
+            <h2 class="hdg hdg_3">2015</h2>
 
-            <ul>
+            <ul class="blocks">
             {{#each collections.articles}}
                 {{#checkYear 2015 this.date}}
                 <li>
-                    <h2>{{ this.title }}</h2>
-                    <div>Posted {{ formatDate this.date }}</div>
+                    <h3>{{ this.title }}</h3>
+                    <a href="{{ this.permalink }}">
+                        <img src="{{ this.thumbnail }}" alt="" />
+                    </a>
                 </li>
                 {{/checkYear}}
             {{/each}}
             </ul>
 --}}
 
-            <h2>2014</h2>
+            <h3 class="hdg hdg_3">2014</h3>
 
-            <ul>
+            <ul class="blocks">
             {{#each collections.articles}}
                 {{#checkYear 2014 this.date}}
                 <li>
-                    <h2>{{ this.title }}</h2>
-                    <div>Posted {{ formatDate this.date }}</div>
+                    <h3>{{ this.title }}</h3>
+                    <a href="{{ this.permalink }}">
+                        <img src="{{ this.thumbnail }}" alt="" />
+                    </a>
                 </li>
                 {{/checkYear}}
             {{/each}}
