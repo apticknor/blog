@@ -1,6 +1,12 @@
 {{> header}}
 
     <div class="tier">
+        <div class="hero">
+
+        </div>
+    </div>
+
+    <div class="tier">
         <div class="wrapper">
 
             {{{ contents }}}

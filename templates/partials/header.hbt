@@ -18,6 +18,10 @@
 
         <div class="tier tier_accent">
             <div class="wrapper">
-
+                <div class="masthead">
+                    <div class="masthead-logo">
+                        <a href="/">Anthony Ticknor</a>
+                    </div>
+                </div>
             </div>
         </div>
