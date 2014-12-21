@@ -2,7 +2,16 @@
 
     <div class="tier">
         <div class="hero">
-
+            <div class="wrapper">
+                <div class="feature">
+                    <div class="feature-media">
+                        <img class="globe" src="/assets/images/anthony_ticknor.jpg" alt="It's me. Anthony Ticknor." />
+                    </div>
+                    <div class="feature-content">
+                        <p>Hi. I’m Anthony Ticknor, a CSS aficionado, and a Technology Manager at <a href="http://nerdery.com/people/#Tt#">The Nerdery</a>. I'm a big fan of making the web work for people regardless of who they are, where they are, and whatever device they may have in front of them.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

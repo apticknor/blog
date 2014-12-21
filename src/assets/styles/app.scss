@@ -10,11 +10,12 @@
 
 // colors
 $COLOR_WHITE: #ffffff;
+$COLOR_WHITE_TRANSPARENT: rgba($COLOR_WHITE,0.6);
 $COLOR_GHOST: #f3f6fa;
 $COLOR_CREAM: #ebe7e3;
 $COLOR_DARK:  #2d2d2d;
 $COLOR_DARK_TRANSPARENT: rgba($COLOR_DARK,0.5);
-$COLOR_DARK_GHOSTED: rgba($COLOR_DARK,0.05);
+$COLOR_DARK_GHOSTED: rgba($COLOR_DARK,0.2);
 $COLOR_ACCENT: #4E9CB5;
 
 // fonts
@@ -50,8 +51,9 @@ $PAD_STANDARD: 20px;
 $PAD_LARGE: 40px;
 
 // mediaqueries / breakpoints
-$BREAKPOINT_SM: 36em;
-$BREAKPOINT_MD: 50em;
+$BREAKPOINT_SM: 36em; // 576px
+$BREAKPOINT_MD: 42em; // 672px
+$BREAKPOINT_LG: 50em; // 800px
 
 /* ---------------------------------------------------------------------
  Mixins
@@ -75,12 +77,25 @@ $BREAKPOINT_MD: 50em;
     @else if $point == MD {
         @media (min-width: $BREAKPOINT_MD) { @content; }
     }
+    @else if $point == LG {
+        @media (min-width: $BREAKPOINT_LG) { @content; }
+    }
 }
 
 @mixin box-sizing($BOX_MODEL) {
     -webkit-box-sizing: $BOX_MODEL;
        -moz-box-sizing: $BOX_MODEL;
             box-sizing: $BOX_MODEL;
+}
+
+@mixin border-radius($RADIUS...) {
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+         -o-background-clip: padding-box;
+            background-clip: padding-box; // stops color from going past the edge of the rounded element
+    -webkit-border-radius: $RADIUS;
+       -moz-border-radius: $RADIUS;
+            border-radius: $RADIUS;
 }
 
 /* ---------------------------------------------------------------------
@@ -236,16 +251,62 @@ a:focus {
     font-size: $FONT_SIZE_MD;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center;
+    @include breakpoint(MD) {
+        text-align: left;
+    }
 }
 
 /* ---------------------------------------------------------------------
  Landmark - Hero
 ------------------------------------------------------------------------ */
 .hero {
+    position: relative; // needed for content positioning
+    min-height: 200px;
     background-image: url("/assets/images/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    background-position: center top;
+    color: $COLOR_WHITE;
+    text-align: center;
+    text-shadow: 1px 1px 2px $COLOR_DARK;
+    @include breakpoint(SM) {
+        min-height: 300px;
+    }
+    @include breakpoint(MD) {
+        text-align: left;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Landmark - Feature
+------------------------------------------------------------------------ */
+.feature {
+    padding: $PAD_STANDARD;
+    @include breakpoint(MD) {
+        padding: 0; // reset
+        padding-top: 75px; // magic number to position roughly centered in the hero area
+        display: table;
+    }
+}
+
+.feature-media {
+    @include breakpoint(MD) {
+        display: table-cell;
+        width: 200px;
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+.feature-content {
+    padding: $PAD_STANDARD 0;
+    @include breakpoint(MD) {
+        padding: 0; // reset
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+    }
 }
 
 /* ---------------------------------------------------------------------
@@ -307,6 +368,22 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+ Content Module - Globe
+------------------------------------------------------------------------ */
+.globe {
+    width: 100px;
+    height: auto;
+    border: 3px solid $COLOR_WHITE_TRANSPARENT;
+    @include border-radius(50%);
+    @include breakpoint(SM) {
+        width: 150px;
+    }
+    @include breakpoint(MD) {
+        display: block; // needed for centering in the hero feature
+    }
+}
+
+/* ---------------------------------------------------------------------
  Content Module - Heading
 ------------------------------------------------------------------------ */
 .hdg {
@@ -323,7 +400,7 @@ a:focus {
     }
 }
 
-@include breakpoint(MD) {
+@include breakpoint(LG) {
     .hdg_1 {
         font-size: $FONT_SIZE_XXL;
     }
@@ -363,7 +440,7 @@ a:focus {
         }
     }
 
-    @include breakpoint(MD) {
+    @include breakpoint(LG) {
         h1 {
             font-size: $FONT_SIZE_XXL;
         }
