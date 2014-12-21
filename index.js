@@ -2,6 +2,7 @@
 // Setup
 // --------------------------------------
 var Metalsmith      = require('metalsmith'),
+    assets          = require('metalsmith-assets'),
     markdown        = require('metalsmith-markdown'),
     templates       = require('metalsmith-templates'),
     collections     = require('metalsmith-collections'),
@@ -56,6 +57,10 @@ Metalsmith(__dirname)
         outputStyle: 'compressed'
     }))
     .use(uglify())
+    .use(assets({
+        source: './src/assets',
+        destination: './assets'
+    }))
     .destination('./_build')
     .build(function(err, files) {
         if (err) { throw err; }
