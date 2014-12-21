@@ -4,8 +4,8 @@ collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/rad-css/"
 date: 2014-02-20
-image: "/images/rad-css.jpg"
-thumbnail: "/images/rad-css_thumb.jpg"
+image: "/assets/images/rad-css.jpg"
+thumbnail: "/assets/images/rad-css_thumb.jpg"
 excerpt: ""
 ---
 In 1986, [the movie RAD](http://www.imdb.com/title/tt0091817/) was released, and my life was never really the same. I must've watched [Cru Jones ride Helltrack](https://www.youtube.com/watch?v=vvJ-U0vgrPk) a thousand times or more and daydreamed about when I'd get my opportunity to to backflip my bike over some bad guys.
