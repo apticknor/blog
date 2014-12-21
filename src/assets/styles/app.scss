@@ -315,27 +315,28 @@ a:focus {
     line-height: $LINE_HEIGHT_CONDENSED;
     font-family: $FONT_FAMILY_SANS_SERIF_BOLD;
     font-weight: normal;
+    text-transform: uppercase;
 }
 
 @include breakpoint(SM) {
-        .hdg_1 {
-            font-size: $FONT_SIZE_XL;
-        }
+    .hdg_1 {
+        font-size: $FONT_SIZE_XL;
+    }
+}
+
+@include breakpoint(MD) {
+    .hdg_1 {
+        font-size: $FONT_SIZE_XXL;
     }
 
-    @include breakpoint(MD) {
-        .hdg_1 {
-            font-size: $FONT_SIZE_XXL;
-        }
-
-        .hdg_2 {
-            font-size: $FONT_SIZE_XL;
-        }
-
-        .hdg_3 {
-            font-size: $FONT_SIZE_LG;
-        }
+    .hdg_2 {
+        font-size: $FONT_SIZE_XL;
     }
+
+    .hdg_3 {
+        font-size: $FONT_SIZE_LG;
+    }
+}
 
 /* ---------------------------------------------------------------------
  Content Module - User Content
@@ -354,6 +355,7 @@ a:focus {
         line-height: $LINE_HEIGHT_CONDENSED;
         font-family: $FONT_FAMILY_SANS_SERIF_BOLD;
         font-weight: normal;
+        text-transform: uppercase;
     }
 
     @include breakpoint(SM) {
@@ -577,6 +579,7 @@ a:focus {
     th {
         vertical-align: inherit;
         text-align: left;
+        text-transform: uppercase;
         font-family: $FONT_FAMILY_SANS_SERIF_BOLD;
         font-weight: normal;
         padding: 2px 10px;
