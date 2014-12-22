@@ -2,6 +2,7 @@
 // Setup
 // --------------------------------------
 var Metalsmith      = require('metalsmith'),
+    ignore          = require('metalsmith-ignore'),
     assets          = require('metalsmith-assets'),
     markdown        = require('metalsmith-markdown'),
     templates       = require('metalsmith-templates'),
@@ -37,6 +38,9 @@ Handlebars.registerHelper('checkYear', function(expectedYear, postDate, options)
 // Metalsmith
 // --------------------------------------
 Metalsmith(__dirname)
+    .use(ignore([
+        '_drafts/*'
+    ]))
     .use(collections({
         articles: {
             sortBy: 'date',
