@@ -1,28 +1,43 @@
 {{> header}}
 
-    <div class="tier">
-        <div class="wrapper">
-            <div class="section">
-                <div class="section-hd">
-                    <h1 class="hdg hdg_2">Archive</h1>
+    <div role="main">
+
+        <div class="tier">
+            <div class="wrapper">
+
+                <div class="section">
+                    <div class="section-hd">
+                        <h2 class="hdg hdg_2">
+                            <a href="/posts/2014/">Posts of 2014</a>
+                        </h2>
+                    </div>
+                    <div class="section-bd">
+                        <ul class="blocks">
+                        {{#each collections.articles}}
+                            {{#checkYear 2014 this.date}}
+                            <li>
+                                <div class="teaser">
+                                    <div class="teaser-media">
+                                        <a href="{{ this.permalink }}">
+                                            <img src="{{ this.thumbnail }}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="teaser-hd">
+                                        <a href="{{ this.permalink }}">
+                                            <h3>{{ this.title }}</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/checkYear}}
+                        {{/each}}
+                        </ul>
+                    </div>
                 </div>
-                <div class="section-bd">
-                    <h3 class="hdg hdg_3">2014</h3>
-                    <ul class="blocks">
-                    {{#each collections.articles}}
-                        {{#checkYear 2014 this.date}}
-                        <li>
-                            <h3>{{ this.title }}</h3>
-                            <a href="{{ this.permalink }}">
-                                <img src="{{ this.thumbnail }}" alt="" />
-                            </a>
-                        </li>
-                        {{/checkYear}}
-                    {{/each}}
-                    </ul>
-                </div>
+
             </div>
         </div>
+
     </div>
 
 {{> footer}}

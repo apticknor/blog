@@ -1,24 +1,41 @@
 {{> header}}
 
-    <div class="tier">
-        <div class="wrapper">
+    <div role="main">
 
-            <h1 class="hdg hdg_2">{{ archiveYear }}</h1>
+        <div class="tier">
+            <div class="wrapper">
 
-            <ul class="blocks">
-            {{#each collections.articles}}
-                {{#checkYear ../archiveYear this.date}}
-                <li>
-                    <h2>{{ this.title }}</h2>
-                    <a href="{{ this.permalink }}">
-                        <img src="{{ this.thumbnail }}" alt="" />
-                    </a>
-                </li>
-                {{/checkYear}}
-            {{/each}}
-            </ul>
+                <div class="section">
+                    <div class="section-hd">
+                        <h2 class="hdg hdg_2">Posts of {{ archiveYear }}</h2>
+                    </div>
+                    <div class="section-bd">
+                        <ul class="blocks">
+                        {{#each collections.articles}}
+                            {{#checkYear ../archiveYear this.date}}
+                            <li>
+                                <div class="teaser">
+                                    <div class="teaser-media">
+                                        <a href="{{ this.permalink }}">
+                                            <img src="{{ this.thumbnail }}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="teaser-hd">
+                                        <a href="{{ this.permalink }}">
+                                            <h3>{{ this.title }}</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/checkYear}}
+                        {{/each}}
+                        </ul>
+                    </div>
+                </div>
 
+            </div>
         </div>
+
     </div>
 
 {{> footer}}

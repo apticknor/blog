@@ -1,16 +1,19 @@
 {{> header}}
 
+    <div role="main">
+
         <div class="tier">
             <div class="wrapper">
+
                 <div class="post">
                     <div class="post-hd">
                         <h2 class="hdg hdg_2">{{ title }}</h2>
                     </div>
-                    <div class="post-meta">
-                        {{ formatDate date }}
-                    </div>
                     <div class="post-media">
                         <img src="{{image}}" alt="{{title}}" />
+                    </div>
+                    <div class="post-meta">
+                        <span class="label">Posted: {{ formatDate date }}</span>
                     </div>
                     <div class="post-bd">
                         <div class="userContent">
@@ -18,7 +21,10 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
+
+    </div>
 
 {{> footer}}

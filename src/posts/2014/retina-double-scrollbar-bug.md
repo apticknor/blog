@@ -35,6 +35,6 @@ I’ve reported the issue and would appreciate any other comments (or a star) at
 
 ----
 
-## Update
+### Update
 
 AS of Chrome 37 this bug is no longer reproducible.

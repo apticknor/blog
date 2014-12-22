@@ -9,7 +9,7 @@
         <meta name="description" content="" />
         <link rel="canonical" href="{{ permalink }}" />
         <!-- STYLESHEETS -->
-        <link rel="stylesheet" media="screen, projection" href="/assets/styles/app.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1em)" href="/assets/styles/app.css" />
         <!-- SCRIPTS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="/assets/scripts/app.min.js"></script>

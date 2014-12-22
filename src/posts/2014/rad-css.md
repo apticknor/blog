@@ -26,7 +26,7 @@ Originally posted on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-f
 
 ----
 
-## Update
+### Update
 
 Here are some great submissions I've received from my co-workers at The Nerdery.
 

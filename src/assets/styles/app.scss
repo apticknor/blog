@@ -46,6 +46,7 @@ $VR_STANDARD: 1.6rem;
 $VR_EXPANDED: 1.8rem;
 
 // padding
+$PAD_TINY: 4px;
 $PAD_SMALL: 10px;
 $PAD_STANDARD: 20px;
 $PAD_LARGE: 40px;
@@ -247,7 +248,8 @@ a:focus {
     }
 }
 
-.masthead a {
+// specificity to override base and hdg anchors!
+.masthead .masthead-logo a {
     color: $COLOR_WHITE;
     text-decoration: none;
 }
@@ -368,11 +370,29 @@ a:focus {
 /* ---------------------------------------------------------------------
  Layout Module - Post
 ------------------------------------------------------------------------ */
+.post {
+    padding: $PAD_STANDARD 0;
+    @include breakpoint(XL) {
+        padding: $PAD_LARGE 0;
+    }
+}
+
 .post-hd {
-    margin-bottom: $VR_STANDARD;
+    padding-bottom: $PAD_STANDARD;
+    text-align: center;
+    @include breakpoint(MD) {
+        text-align: left;
+    }
+    @include breakpoint(XL) {
+        padding-bottom: $PAD_LARGE;
+    }
 }
 
 .post-media {
+    margin-bottom: $PAD_TINY;
+}
+
+.post-meta {
     margin-bottom: $VR_STANDARD;
 }
 
@@ -405,6 +425,19 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+ Content Module - Label
+------------------------------------------------------------------------ */
+.label {
+    font-size: $FONT_SIZE_XS;
+    line-height: $LINE_HEIGHT_CONDENSED;
+    font-family: $FONT_FAMILY_SANS_SERIF;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $COLOR_DARK_TRANSPARENT;
+}
+
+/* ---------------------------------------------------------------------
  Content Module - Globe
 ------------------------------------------------------------------------ */
 .globe {
@@ -432,6 +465,11 @@ a:focus {
     letter-spacing: 2px;
 }
 
+.hdg a {
+    color: $COLOR_DARK;
+    text-decoration: none;
+}
+
 @include breakpoint(SM) {
     .hdg_1 {
         font-size: $FONT_SIZE_LG;
@@ -452,6 +490,9 @@ a:focus {
  Content Module - User Content
 ------------------------------------------------------------------------ */
 .userContent {
+
+    // keep long shit (like links and words) from creating horizontal scrollbars
+    word-break: break-word;
 
     // headings
     h1,
