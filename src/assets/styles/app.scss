@@ -54,7 +54,7 @@ $PAD_LARGE: 40px;
 $BREAKPOINT_SM: 36em; // 576px
 $BREAKPOINT_MD: 42em; // 672px
 $BREAKPOINT_LG: 50em; // 800px
-
+$BREAKPOINT_XL: 58em; // 928px
 /* ---------------------------------------------------------------------
  Mixins
 ------------------------------------------------------------------------ */
@@ -79,6 +79,9 @@ $BREAKPOINT_LG: 50em; // 800px
     }
     @else if $point == LG {
         @media (min-width: $BREAKPOINT_LG) { @content; }
+    }
+    @else if $point == XL {
+        @media (min-width: $BREAKPOINT_XL) { @content; }
     }
 }
 
@@ -239,6 +242,9 @@ a:focus {
 .masthead {
     padding: $PAD_SMALL 0;
     color: $COLOR_WHITE;
+    @include breakpoint(XL) {
+        padding: $PAD_STANDARD 0;
+    }
 }
 
 .masthead a {
@@ -247,10 +253,6 @@ a:focus {
 }
 
 .masthead-logo {
-    font-family: $FONT_FAMILY_SANS_SERIF;
-    font-size: $FONT_SIZE_MD;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     text-align: center;
     @include breakpoint(MD) {
         text-align: left;
@@ -342,6 +344,9 @@ a:focus {
 .blocks {
     margin: #{-$PAD_STANDARD} 0 0 #{-$PAD_STANDARD}; // fix padding offset created by first row and first item in each row
     font-size: 0; // remove the extra space between inline-block elements.
+    @include breakpoint(XL) {
+        margin: #{-$PAD_LARGE} 0 0 #{-$PAD_LARGE}; // space items and rows
+    }
 }
 
 
@@ -352,11 +357,11 @@ a:focus {
     padding: $PAD_STANDARD 0 0 $PAD_STANDARD; // space items and rows
     font-size: $FONT_SIZE_SM; // reset the font-size after removing it to fix inline-block
     width: 100%; // should be 100% until hitting the first breakpoint
-}
-
-@include breakpoint(SM) {
-    .blocks > * {
+    @include breakpoint(SM) {
         width: 50%;
+    }
+    @include breakpoint(XL) {
+        padding: $PAD_LARGE 0 0 $PAD_LARGE; // space items and rows
     }
 }
 
@@ -369,6 +374,34 @@ a:focus {
 
 .post-media {
     margin-bottom: $VR_STANDARD;
+}
+
+/* ---------------------------------------------------------------------
+ Container Module - Section
+------------------------------------------------------------------------ */
+.section {
+    padding: $PAD_STANDARD 0;
+    @include breakpoint(XL) {
+        padding: $PAD_LARGE 0;
+    }
+}
+
+.section-hd {
+    padding-bottom: $PAD_STANDARD;
+    text-align: center;
+    @include breakpoint(MD) {
+        text-align: left;
+    }
+    @include breakpoint(XL) {
+        padding-bottom: $PAD_LARGE;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Container Module - Teaser
+------------------------------------------------------------------------ */
+.teaser-hd {
+    text-align: center;
 }
 
 /* ---------------------------------------------------------------------
@@ -396,25 +429,22 @@ a:focus {
     font-family: $FONT_FAMILY_SANS_SERIF;
     font-weight: normal;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 @include breakpoint(SM) {
     .hdg_1 {
-        font-size: $FONT_SIZE_XL;
+        font-size: $FONT_SIZE_LG;
     }
 }
 
-@include breakpoint(LG) {
+@include breakpoint(MD) {
     .hdg_1 {
         font-size: $FONT_SIZE_XL;
     }
 
     .hdg_2 {
         font-size: $FONT_SIZE_LG;
-    }
-
-    .hdg_3 {
-        font-size: $FONT_SIZE_MD;
     }
 }
 
@@ -436,6 +466,7 @@ a:focus {
         font-family: $FONT_FAMILY_SANS_SERIF;
         font-weight: normal;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     @include breakpoint(SM) {
@@ -444,7 +475,7 @@ a:focus {
         }
     }
 
-    @include breakpoint(LG) {
+    @include breakpoint(MD) {
         h1 {
             font-size: $FONT_SIZE_XL;
         }

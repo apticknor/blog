@@ -20,7 +20,9 @@
             <div class="wrapper">
                 <div class="masthead">
                     <div class="masthead-logo">
-                        <a href="/">Anthony Ticknor</a>
+                        <h1 class="hdg">
+                            <a href="/">Anthony Ticknor</a>
+                        </h1>
                     </div>
                 </div>
             </div>

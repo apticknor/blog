@@ -34,6 +34,25 @@ Handlebars.registerHelper('checkYear', function(expectedYear, postDate, options)
     }
 });
 
+// https://github.com/diy/handlebars-helpers/blob/master/lib/each-limit.js
+// a limited 'each' loop.
+// usage: {{#each-limit items 3}} ... {{/each-limit}}
+Handlebars.registerHelper('limit', function(context, limit) {
+    var options = arguments[arguments.length - 1];
+    var ret = '';
+
+    if (context && context.length > 0) {
+        var max = Math.min(context.length, limit);
+        for (var i = 0; i < max; i++) {
+            ret += options.fn(context[i]);
+        }
+    } else {
+        ret = options.inverse(this);
+    }
+
+    return ret;
+});
+
 // --------------------------------------
 // Metalsmith
 // --------------------------------------

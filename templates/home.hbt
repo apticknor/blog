@@ -8,7 +8,7 @@
                         <img class="globe" src="/assets/images/anthony_ticknor.jpg" alt="It's me. Anthony Ticknor." />
                     </div>
                     <div class="feature-content">
-                        <p>Hi. I’m Anthony Ticknor, a CSS aficionado, and a Technology Manager at <a href="http://nerdery.com/people/#Tt#">The Nerdery</a>. I'm a big fan of making the web work for people regardless of who they are, where they are, and whatever device they may have in front of them.</p>
+                        <p>Hi. I’m Anthony Ticknor, a CSS aficionado, and a Technology Manager at <a href="http://nerdery.com/people/#Tt#">The Nerdery</a>. I'm a big fan of making the web work for people regardless of who they are, where they are, or whatever device they have in front of them.</p>
                     </div>
                 </div>
             </div>
@@ -17,9 +17,31 @@
 
     <div class="tier">
         <div class="wrapper">
-
-            {{{ contents }}}
-
+            <div class="section">
+                <div class="section-hd">
+                    <h2 class="hdg hdg_2">Recent Ramblings</h2>
+                </div>
+                <div class="section-bd">
+                    <ul class="blocks">
+                    {{#limit collections.articles 4}}
+                        <li>
+                            <div class="teaser">
+                                <div class="teaser-media">
+                                    <a href="{{ this.permalink }}">
+                                        <img src="{{ this.thumbnail }}" alt="" />
+                                    </a>
+                                </div>
+                                <div class="teaser-hd">
+                                    <a href="{{ this.permalink }}">
+                                        <h2>{{ this.title }}</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    {{/limit}}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
