@@ -18,7 +18,7 @@
 
         <div class="tier tier_accent">
             <div class="wrapper">
-                <div class="masthead">
+                <div class="masthead" role="banner">
                     <div class="masthead-logo">
                         <h1 class="hdg">
                             <a href="/">Anthony Ticknor</a>
