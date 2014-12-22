@@ -391,7 +391,7 @@ a:focus {
  Content Module - Heading
 ------------------------------------------------------------------------ */
 .hdg {
-    font-size: $FONT_SIZE_LG;
+    font-size: $FONT_SIZE_MD;
     line-height: $LINE_HEIGHT_CONDENSED;
     font-family: $FONT_FAMILY_SANS_SERIF;
     font-weight: normal;
@@ -406,15 +406,15 @@ a:focus {
 
 @include breakpoint(LG) {
     .hdg_1 {
-        font-size: $FONT_SIZE_XXL;
-    }
-
-    .hdg_2 {
         font-size: $FONT_SIZE_XL;
     }
 
-    .hdg_3 {
+    .hdg_2 {
         font-size: $FONT_SIZE_LG;
+    }
+
+    .hdg_3 {
+        font-size: $FONT_SIZE_MD;
     }
 }
 
@@ -431,7 +431,7 @@ a:focus {
     h5,
     h6 {
         margin: $VR_EXPANDED 0 $VR_CONDENSED 0;
-        font-size: $FONT_SIZE_LG;
+        font-size: $FONT_SIZE_MD;
         line-height: $LINE_HEIGHT_CONDENSED;
         font-family: $FONT_FAMILY_SANS_SERIF;
         font-weight: normal;
@@ -440,17 +440,17 @@ a:focus {
 
     @include breakpoint(SM) {
         h1 {
-            font-size: $FONT_SIZE_XL;
+            font-size: $FONT_SIZE_LG;
         }
     }
 
     @include breakpoint(LG) {
         h1 {
-            font-size: $FONT_SIZE_XXL;
+            font-size: $FONT_SIZE_XL;
         }
 
         h2 {
-            font-size: $FONT_SIZE_XL;
+            font-size: $FONT_SIZE_LG;
         }
     }
 
