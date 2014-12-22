@@ -27,7 +27,7 @@ After a significant amount of research I noticed a few things.
 - It’s only happening when `overflow-y` is set to scroll on `<body>` and fixed positioning is set with a negative `z-index`
 - It’s only happening when my system preferences have "show scroll bars" set to "always"
 
-That’s quite a mouthful. So anyways, if you’ve got a Macbook with Retina with the proper user settings and you’re using Chrome, [check out this demo](http://anthonyticknor.com/_demos/double-scrollbar/)
+That’s quite a mouthful. So anyways, if you’ve got a Macbook with Retina with the proper user settings and you’re using Chrome, [check out this demo](http://anthonyticknor.com/demos/double-scrollbar/)
 
 The short term solution for this bug is to simply avoid the negative `z-index` or `overflow-y` all together.
 
