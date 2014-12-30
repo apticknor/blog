@@ -240,25 +240,70 @@ a:focus {
 /* ---------------------------------------------------------------------
  Landmark - Masthead
 ------------------------------------------------------------------------ */
+@mixin masthead-anchor() {
+    font-family: $FONT_FAMILY_SANS_SERIF;
+    color: $COLOR_WHITE;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .masthead {
     padding: $PAD_SMALL 0;
-    color: $COLOR_WHITE;
+    text-align: center;
+    line-height: $LINE_HEIGHT_STANDARD_NARROW;
+    @include breakpoint(MD) {
+        text-align: left;
+        display: table;
+        width: 100%;
+    }
     @include breakpoint(XL) {
         padding: $PAD_STANDARD 0;
     }
 }
 
-// specificity to override base and hdg anchors!
-.masthead .masthead-logo a {
-    color: $COLOR_WHITE;
-    text-decoration: none;
+.masthead-logo {
+    margin-bottom: $PAD_SMALL;
+    font-size: $FONT_SIZE_MD;
+    @include breakpoint(MD) {
+        margin-bottom: 0; // reset
+        display: table-cell;
+        width: 50%;
+        text-align: left;
+        vertical-align: middle;
+    }
 }
 
-.masthead-logo {
-    text-align: center;
+.masthead-logo a {
+    @include masthead-anchor();
+    letter-spacing: 2px;
+}
+
+.masthead-nav {
+    background-color: $COLOR_DARK_GHOSTED;
+    margin: 0 #{-$PAD_STANDARD}; // undo wrapper padding
+    padding: $PAD_SMALL 0;
     @include breakpoint(MD) {
-        text-align: left;
+        background-color: transparent; // reset
+        margin: 0; // reset
+        padding: 0; // reset
+        display: table-cell;
+        width: 50%;
+        text-align: right;
+        vertical-align: middle;
     }
+}
+
+.masthead-nav-list > li {
+    display: inline-block;
+}
+
+.masthead-nav-list li + li {
+    padding-left: $PAD_STANDARD;
+}
+
+.masthead-nav-list a {
+    @include masthead-anchor();
+    letter-spacing: 1px;
 }
 
 /* ---------------------------------------------------------------------
@@ -328,6 +373,10 @@ a:focus {
 .tier_accent {
     background-color: $COLOR_ACCENT;
     border-bottom: 1px solid $COLOR_DARK_GHOSTED;
+}
+
+.tier_dark {
+    background-color: $COLOR_DARK;
 }
 
 /* ---------------------------------------------------------------------

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en-us">
+<html lang="en-us">
     <head>
         <!-- META DATA -->
         <meta charset="utf-8" />
@@ -10,9 +10,11 @@
         <link rel="canonical" href="{{ permalink }}" />
         <!-- STYLESHEETS -->
         <link rel="stylesheet" media="screen and (min-width: 1em)" href="/assets/styles/app.css" />
+{{!--
         <!-- SCRIPTS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="/assets/scripts/app.min.js"></script>
+--}}
     </head>
     <body>
 
@@ -20,9 +22,16 @@
             <div class="wrapper">
                 <div class="masthead" role="banner">
                     <div class="masthead-logo">
-                        <h1 class="hdg">
+                        <h1>
                             <a href="/">Anthony Ticknor</a>
                         </h1>
+                    </div>
+                    <div class="masthead-nav" role="navigation">
+                        <ul class="masthead-nav-list">
+                            <li><a href="/posts/">Blog</a></li>
+                            <li><a href="/portfolio/">Portfolio</a></li>
+                            <li><a href="/about/">About</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
