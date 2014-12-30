@@ -1,0 +1,20 @@
+{{> header}}
+
+    <div role="main">
+
+        <div class="tier">
+            <div class="wrapper">
+                <div class="section">
+                    <div class="section-hd">
+                        <h2 class="hdg hdg_2">{{ title }}</h2>
+                    </div>
+                    <div class="section-bd">
+                        {{{ contents }}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{{> footer}}
