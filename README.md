@@ -22,6 +22,11 @@ A theme for the [Metalsmith](http://www.metalsmith.io/) static site generator.
   * @description: the canonical permalink for the content
   * @usage: included in `<link rel="canonical href="" />`
   * @usage: used to link to pages in various contexts
+* excerpt
+  * @description: the excerpt about the post or page
+  * @usage: displayed as the description in search engines and throughout the site when a brief summary is required
+  * @requirement: about 150 characters if possible
+
 
 ### Listing Template
 
@@ -45,7 +50,3 @@ A theme for the [Metalsmith](http://www.metalsmith.io/) static site generator.
   * @description: the article thumbnail image
   * @usage: displayed as a thumbnail of the article on pages where the article is mentioned
   * @requirement: 600px x 460px
-* excerpt
-  * @description: the article excerpt
-  * @usage: displayed as a summary of the article on pages where the article is mentioned
-  * @requirement: about 140 characters if possible

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO -->
         <title>{{ title }} | Anthony Ticknor</title>
-        <meta name="description" content="" />
+        <meta name="description" content="{{#if excerpt}}{{ excerpt }}{{else}}Hi. I’m Anthony Ticknor, a CSS aficionado, and a Technology Manager at The Nerdery. I'm a big fan of making the web work for people regardless of who they are, where they are, or whatever device they have in front of them.{{/if}}" />
         <link rel="canonical" href="{{ permalink }}" />
         <!-- STYLESHEETS -->
         <link rel="stylesheet" media="screen and (min-width: 1em)" href="/assets/styles/app.css" />
