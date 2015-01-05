@@ -1,52 +1,44 @@
 {{> header}}
 
     <div role="main">
-
-        <div class="tier">
-            <div class="hero">
-                <div class="wrapper">
-                    <div class="feature">
-                        <div class="feature-media">
-                            <img class="globe" src="/assets/images/anthony_ticknor.jpg" alt="It's me. Anthony Ticknor." />
-                        </div>
-                        <div class="feature-content">
-                            <p>Hi. I’m Anthony Ticknor, a CSS aficionado, and a Technology Manager at <a href="http://nerdery.com/people/#Tt">The Nerdery</a>. I'm a big fan of making the web work for people regardless of who they are, where they are, or whatever device they have in front of them.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="tier">
             <div class="wrapper">
-                <div class="section">
-                    <div class="section-hd">
-                        <h2 class="hdg hdg_2">Recent Ramblings</h2>
-                    </div>
-                    <div class="section-bd">
-                        <ul class="blocks">
-                        {{#limit collections.articles 4}}
-                            <li>
-                                <div class="teaser">
-                                    <div class="teaser-media">
-                                        <a href="{{ this.permalink }}">
-                                            <img src="{{ this.thumbnail }}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="teaser-hd">
-                                        <a href="{{ this.permalink }}">
-                                            <h3>{{ this.title }}</h3>
-                                        </a>
+                <div class="grid">
+                    <div class="grid-col grid-col_main">
+                        <h2 class="isVisuallyHidden">Recent Blog Posts</h2>
+                        <div class="pods">
+                            {{#limit collections.articles 12}}
+                                <div class="pods-item">
+                                    <div class="teaser">
+                                        <div class="teaser-media">
+                                            <a href="{{ this.permalink }}">
+                                                <img src="{{ this.thumbnail }}" alt="" />
+                                            </a>
+                                        </div>
+                                        <div class="teaser-bd">
+                                            <div class="teaser-bd-title">
+                                                <h3>
+                                                    <a href="{{ this.permalink }}">{{ this.title }}</a>
+                                                </h3>
+                                            </div>
+                                            <div class="teaser-bd-date">
+                                                {{ formatDate date }}
+                                            </div>
+                                            <div class="teaser-bd-excerpt">
+                                                {{ this.excerpt }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        {{/limit}}
-                        </ul>
+                            {{/limit}}
+                        </div>
+                    </div>
+                    <div class="grid-col grid-col_sub">
+                        {{> sidebar}}
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
 {{> footer}}

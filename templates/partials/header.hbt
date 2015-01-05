@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <div class="tier tier_accent">
+        <div class="tier">
             <div class="wrapper">
                 <div class="masthead" role="banner">
                     <div class="masthead-logo">

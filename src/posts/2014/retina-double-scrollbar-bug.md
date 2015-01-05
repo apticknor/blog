@@ -6,7 +6,7 @@ permalink: "http://anthonyticknor.com/posts/2014/retina-double-scrollbar-bug/"
 date: 2014-03-24
 image: "/assets/images/desk.jpg"
 thumbnail: "/assets/images/desk_thumb.jpg"
-excerpt: ""
+excerpt: "So today at work I bumped up against a particularly nasty bug. No it’s not a problem with double float margins in legacy browsers."
 ---
 
 So today at work I bumped up against a particularly nasty bug. No it’s not a problem with double float margins in legacy browsers. It’s a problem on a very modern stack that appears to be in happening only in Chrome.

@@ -1,8 +1,7 @@
 /* ---------------------------------------------------------------------
  Fonts included via the google font api
 ------------------------------------------------------------------------ */
-@import url("http://fonts.googleapis.com/css?family=Lato:700");
-@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
 
 /* ---------------------------------------------------------------------
  Variables
@@ -10,35 +9,31 @@
 
 // colors
 $COLOR_WHITE: #ffffff;
-$COLOR_WHITE_TRANSPARENT: rgba($COLOR_WHITE,0.6);
-$COLOR_GHOST: #f3f6fa;
-$COLOR_CREAM: #ebe7e3;
+$COLOR_LIGHT: #f6f3ee;
+$COLOR_GREY: #aeaeae;
 $COLOR_DARK:  #2d2d2d;
-$COLOR_DARK_TRANSPARENT: rgba($COLOR_DARK,0.5);
-$COLOR_DARK_GHOSTED: rgba($COLOR_DARK,0.2);
 $COLOR_ACCENT: #39839e;
 
 // fonts
-$FONT_FAMILY_SERIF: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
-$FONT_FAMILY_SANS_SERIF: "Lato", Helvetica, Arial, sans-serif;
+$FONT_FAMILY_SERIF: Georgia, "Times New Roman", Times, serif;
+$FONT_FAMILY_SANS_SERIF: "Open Sans", Helvetica, Arial, sans-serif;
 $FONT_FAMILY_MONOSPACE: "Lucida Console", Monaco, monospace;
 
-// font sizes
-$font-SCALE: 1.333; // a perfect fourth
-$font-BASE: 1rem; // standard 16px
+// font scale
+// http://type-scale.com/?size=16&scale=1.200&text=A%20Visual%20Type%20Scale&webfont=Open+Sans&font-family=%27Open%20Sans%27,%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333
 
-$FONT_SIZE_MD:  $font-BASE * $font-SCALE;
-$FONT_SIZE_SM:  $FONT_SIZE_MD / $font-SCALE;
-$FONT_SIZE_XS:  $FONT_SIZE_SM / $font-SCALE;
-$FONT_SIZE_XXS: $FONT_SIZE_XS / $font-SCALE;
-$FONT_SIZE_LG:  $FONT_SIZE_MD * $font-SCALE;
-$FONT_SIZE_XL:  $FONT_SIZE_LG * $font-SCALE;
-$FONT_SIZE_XXL: $FONT_SIZE_XL * $font-SCALE;
+$FONT_SIZE_XXS: 0.694rem;
+$FONT_SIZE_XS:  0.833rem;
+$FONT_SIZE_SM:  1.000rem;
+$FONT_SIZE_MD:  1.200rem;
+$FONT_SIZE_LG:  1.440rem;
+$FONT_SIZE_XL:  1.728rem;
+$FONT_SIZE_XXL: 2.074rem;
+
+$FONT_SIZE_DEFAULT: $FONT_SIZE_SM;
 
 // line heights
-$LINE_HEIGHT_CONDENSED: 1.2;
-$LINE_HEIGHT_STANDARD_NARROW: 1.6;
-$LINE_HEIGHT_STANDARD_WIDE: 2;
+$LINE_HEIGHT_STANDARD: 1.4;
 
 // vertical rhythm
 $VR_CONDENSED: .7rem;
@@ -46,16 +41,16 @@ $VR_STANDARD: 1.6rem;
 $VR_EXPANDED: 1.8rem;
 
 // padding
-$PAD_TINY: 4px;
-$PAD_SMALL: 10px;
+$PAD_SMALL: 14px;
 $PAD_STANDARD: 20px;
 $PAD_LARGE: 40px;
 
 // mediaqueries / breakpoints
 $BREAKPOINT_SM: 36em; // 576px
-$BREAKPOINT_MD: 42em; // 672px
-$BREAKPOINT_LG: 50em; // 800px
+$BREAKPOINT_MD: 44em; // 704px
+$BREAKPOINT_LG: 52em; // 832px
 $BREAKPOINT_XL: 58em; // 928px
+
 /* ---------------------------------------------------------------------
  Mixins
 ------------------------------------------------------------------------ */
@@ -216,55 +211,56 @@ textarea {
  Base Styles
 ------------------------------------------------------------------------ */
 body {
-    background-color: $COLOR_GHOST;
+    background-color: $COLOR_LIGHT;
     color: $COLOR_DARK;
-    font-family: $FONT_FAMILY_SERIF;
-    font-size: $FONT_SIZE_SM;
-    line-height: $LINE_HEIGHT_STANDARD_NARROW;
-    @include breakpoint(SM) {
-        line-height: $LINE_HEIGHT_STANDARD_WIDE;
-    }
+    font-family: $FONT_FAMILY_SANS_SERIF;
+    font-size: $FONT_SIZE_DEFAULT;
+    line-height: $LINE_HEIGHT_STANDARD;
 }
 
 a {
-    text-decoration: underline;
-    color: $COLOR_ACCENT;
+    text-decoration: none;
+    color: $COLOR_DARK;
 }
 
 a:hover,
 a:focus {
-    text-decoration: underline;
-    color: $COLOR_ACCENT;
+    text-decoration: none;
+    color: $COLOR_DARK;
+}
+
+/* ---------------------------------------------------------------------
+ Utility Classes
+------------------------------------------------------------------------ */
+.isVisuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
 }
 
 /* ---------------------------------------------------------------------
  Landmark - Masthead
 ------------------------------------------------------------------------ */
-@mixin masthead-anchor() {
-    font-family: $FONT_FAMILY_SANS_SERIF;
-    color: $COLOR_WHITE;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
 .masthead {
-    padding: $PAD_SMALL 0;
+    padding: $PAD_STANDARD 0;
     text-align: center;
-    line-height: $LINE_HEIGHT_STANDARD_NARROW;
-    @include breakpoint(MD) {
+    line-height: $LINE_HEIGHT_STANDARD;
+    @include breakpoint(LG) {
         text-align: left;
         display: table;
         width: 100%;
-    }
-    @include breakpoint(XL) {
-        padding: $PAD_STANDARD 0;
+        margin-bottom: 60px;
     }
 }
 
 .masthead-logo {
-    margin-bottom: $PAD_SMALL;
-    font-size: $FONT_SIZE_MD;
-    @include breakpoint(MD) {
+    margin-bottom: $VR_CONDENSED;
+    @include breakpoint(LG) {
         margin-bottom: 0; // reset
         display: table-cell;
         width: 50%;
@@ -274,18 +270,16 @@ a:focus {
 }
 
 .masthead-logo a {
-    @include masthead-anchor();
+    font-size: $FONT_SIZE_MD;
+    text-transform: uppercase;
     letter-spacing: 2px;
+    @include breakpoint(LG) {
+        font-size: $FONT_SIZE_LG;
+    }
 }
 
 .masthead-nav {
-    background-color: $COLOR_DARK_GHOSTED;
-    margin: 0 #{-$PAD_STANDARD}; // undo wrapper padding
-    padding: $PAD_SMALL 0;
-    @include breakpoint(MD) {
-        background-color: transparent; // reset
-        margin: 0; // reset
-        padding: 0; // reset
+    @include breakpoint(LG) {
         display: table-cell;
         width: 50%;
         text-align: right;
@@ -302,63 +296,11 @@ a:focus {
 }
 
 .masthead-nav-list a {
-    @include masthead-anchor();
+    font-size: $FONT_SIZE_SM;
+    text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-/* ---------------------------------------------------------------------
- Landmark - Hero
------------------------------------------------------------------------- */
-.hero {
-    position: relative; // needed for content positioning
-    min-height: 200px;
-    background-image: url("/assets/images/hero.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    color: $COLOR_WHITE;
-    text-align: center;
-    text-shadow: 1px 1px 2px $COLOR_DARK;
-    @include breakpoint(SM) {
-        min-height: 300px;
-    }
-    @include breakpoint(MD) {
-        text-align: left;
-    }
-}
-
-.hero a {
-    color: $COLOR_WHITE;
-}
-
-/* ---------------------------------------------------------------------
- Landmark - Feature
------------------------------------------------------------------------- */
-.feature {
-    padding: $PAD_STANDARD;
-    @include breakpoint(MD) {
-        padding: 0; // reset
-        padding-top: 75px; // magic number to position roughly centered in the hero area
-        display: table;
-    }
-}
-
-.feature-media {
-    @include breakpoint(MD) {
-        display: table-cell;
-        width: 200px;
-        text-align: left;
-        vertical-align: middle;
-    }
-}
-
-.feature-content {
-    padding: $PAD_STANDARD 0;
-    @include breakpoint(MD) {
-        padding: 0; // reset
-        display: table-cell;
-        text-align: left;
-        vertical-align: middle;
+    @include breakpoint(LG) {
+        font-size: $FONT_SIZE_MD;
     }
 }
 
@@ -372,7 +314,6 @@ a:focus {
 
 .tier_accent {
     background-color: $COLOR_ACCENT;
-    border-bottom: 1px solid $COLOR_DARK_GHOSTED;
 }
 
 .tier_dark {
@@ -383,123 +324,105 @@ a:focus {
  Layout Module - Wrapper
 ------------------------------------------------------------------------ */
 .wrapper {
-    max-width: 800px;
+    max-width: 980px;
     min-width: 200px;
     margin: 0 auto;
     padding: 0 $PAD_STANDARD;
+    @include breakpoint(MD) {
+        padding: 0 $PAD_LARGE;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Layout Module - Grid
+------------------------------------------------------------------------ */
+@include breakpoint(LG) {
+    .grid {
+        @include clearfix();
+    }
+
+    .grid-col {
+        @include box-sizing(border-box);
+        float: left;
+    }
+
+    .grid-col_main {
+        width: 71.8%;
+    }
+
+    .grid-col_sub {
+        width: calc(28.2% - #{$PAD_STANDARD});
+        margin-left: $PAD_STANDARD;
+    }
 }
 
 /* ---------------------------------------------------------------------
  Layout Module - Blocks
+
+// chrome has jank handlign for this but it's not busted. just extra space underneath all the columns.
 ------------------------------------------------------------------------ */
-.blocks {
-    margin: #{-$PAD_STANDARD} 0 0 #{-$PAD_STANDARD}; // fix padding offset created by first row and first item in each row
-    font-size: 0; // remove the extra space between inline-block elements.
-    @include breakpoint(XL) {
-        margin: #{-$PAD_LARGE} 0 0 #{-$PAD_LARGE}; // space items and rows
-    }
-}
-
-
-.blocks > * {
-    @include box-sizing(border-box);
-    display: inline-block;
-    vertical-align: top;
-    padding: $PAD_STANDARD 0 0 $PAD_STANDARD; // space items and rows
-    font-size: $FONT_SIZE_SM; // reset the font-size after removing it to fix inline-block
-    width: 100%; // should be 100% until hitting the first breakpoint
+.pods {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap: $PAD_STANDARD;
+       -moz-column-gap: $PAD_STANDARD;
+            column-gap: $PAD_STANDARD;
+    overflow: hidden;
     @include breakpoint(SM) {
-        width: 50%;
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2;
     }
     @include breakpoint(XL) {
-        padding: $PAD_LARGE 0 0 $PAD_LARGE; // space items and rows
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
     }
 }
 
-/* ---------------------------------------------------------------------
- Layout Module - Post
------------------------------------------------------------------------- */
-.post {
-    padding: $PAD_STANDARD 0;
-    @include breakpoint(XL) {
-        padding: $PAD_LARGE 0;
-    }
-}
-
-.post-hd {
-    padding-bottom: $PAD_STANDARD;
-    text-align: center;
-    @include breakpoint(MD) {
-        text-align: left;
-    }
-    @include breakpoint(XL) {
-        padding-bottom: $PAD_LARGE;
-    }
-}
-
-.post-media {
-    margin-bottom: $PAD_TINY;
-}
-
-.post-meta {
-    margin-bottom: $VR_STANDARD;
-}
-
-/* ---------------------------------------------------------------------
- Container Module - Section
------------------------------------------------------------------------- */
-.section {
-    padding: $PAD_STANDARD 0;
-    @include breakpoint(XL) {
-        padding: $PAD_LARGE 0;
-    }
-}
-
-.section-hd {
-    padding-bottom: $PAD_STANDARD;
-    text-align: center;
-    @include breakpoint(MD) {
-        text-align: left;
-    }
-    @include breakpoint(XL) {
-        padding-bottom: $PAD_LARGE;
-    }
+.pods-item {
+    display: inline-block;
+    margin: 0 0 $PAD_STANDARD;
+    width: 100%;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+              page-break-inside: avoid; // mozilla
+            column-break-inside: avoid;
 }
 
 /* ---------------------------------------------------------------------
  Container Module - Teaser
 ------------------------------------------------------------------------ */
-.teaser-hd {
-    text-align: center;
+.teaser {
+    text-align: left; // always align left, even if the container is centered
+    background-color: $COLOR_WHITE;
+    box-shadow: 0 2px 4px -2px rgba($COLOR_DARK,.15);
 }
 
-/* ---------------------------------------------------------------------
- Content Module - Label
------------------------------------------------------------------------- */
-.label {
+.teaser-media img {
+    display: block; // remove extra whitespace below image
+    width: 100%;  // required for use within CSS columns in Firefox
+    height: auto; // required for use within CSS columns in Firefox
+}
+
+.teaser-bd {
+    padding: $PAD_SMALL $PAD_STANDARD;
+}
+
+.teaser-bd-title {
+    margin-bottom: $VR_CONDENSED;
+    font-size: $FONT_SIZE_SM;
+}
+
+.teaser-bd-date {
+    margin-bottom: $VR_CONDENSED;
     font-size: $FONT_SIZE_XS;
-    line-height: $LINE_HEIGHT_CONDENSED;
-    font-family: $FONT_FAMILY_SANS_SERIF;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: $COLOR_DARK_TRANSPARENT;
+    color: $COLOR_GREY;
 }
 
-/* ---------------------------------------------------------------------
- Content Module - Globe
------------------------------------------------------------------------- */
-.globe {
-    width: 100px;
-    height: auto;
-    border: 3px solid $COLOR_WHITE_TRANSPARENT;
-    @include border-radius(50%);
-    @include breakpoint(SM) {
-        width: 150px;
-    }
-    @include breakpoint(MD) {
-        display: block; // needed for centering in the hero feature
-    }
+.teaser-bd-excerpt {
+    font-size: $FONT_SIZE_XS;
 }
 
 /* ---------------------------------------------------------------------
@@ -507,7 +430,7 @@ a:focus {
 ------------------------------------------------------------------------ */
 .hdg {
     font-size: $FONT_SIZE_MD;
-    line-height: $LINE_HEIGHT_CONDENSED;
+    line-height: $LINE_HEIGHT_STANDARD;
     font-family: $FONT_FAMILY_SANS_SERIF;
     font-weight: normal;
     text-transform: uppercase;
@@ -552,7 +475,7 @@ a:focus {
     h6 {
         margin: $VR_EXPANDED 0 $VR_CONDENSED 0;
         font-size: $FONT_SIZE_MD;
-        line-height: $LINE_HEIGHT_CONDENSED;
+        line-height: $LINE_HEIGHT_STANDARD;
         font-family: $FONT_FAMILY_SANS_SERIF;
         font-weight: normal;
         text-transform: uppercase;
@@ -661,7 +584,7 @@ a:focus {
         margin: 0 0 $VR_STANDARD 0;
         padding: $PAD_STANDARD;
         background-color: $COLOR_DARK;
-        color: $COLOR_CREAM;
+        color: $COLOR_WHITE;
         white-space: pre-wrap;
         word-break: break-word;
         line-height: 1.4;
@@ -734,8 +657,8 @@ a:focus {
     // horizontal rule
     hr {
         margin: 0 0 $VR_STANDARD 0;
-        background: $COLOR_DARK_TRANSPARENT;
-        color: $COLOR_DARK_TRANSPARENT;
+        background: $COLOR_DARK;
+        color: $COLOR_DARK;
         height: 1px;
         border: none;
         line-height: 1px;
@@ -774,7 +697,7 @@ a:focus {
         vertical-align: inherit;
         text-align: left;
         padding: 2px 10px;
-        border: 1px solid $COLOR_DARK_TRANSPARENT;
+        border: 1px solid $COLOR_DARK;
     }
 
     th {
@@ -784,7 +707,7 @@ a:focus {
         font-family: $FONT_FAMILY_SANS_SERIF;
         font-weight: normal;
         padding: 2px 10px;
-        border: 1px solid $COLOR_DARK_TRANSPARENT;
+        border: 1px solid $COLOR_DARK;
     }
 
 }

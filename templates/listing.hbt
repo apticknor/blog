@@ -1,41 +1,46 @@
 {{> header}}
 
     <div role="main">
-
         <div class="tier">
             <div class="wrapper">
-
-                <div class="section">
-                    <div class="section-hd">
-                        <h2 class="hdg hdg_2">Posts of {{ archiveYear }}</h2>
+                <div class="grid">
+                    <div class="grid-col grid-col_main">
+                        <h2 class="isVisuallyHidden">Blog Posts of {{ archiveYear }}</h2>
+                        <div class="pods">
+                            {{#each collections.articles}}
+                                {{#checkYear ../archiveYear this.date}}
+                                    <div class="pods-item">
+                                        <div class="teaser">
+                                            <div class="teaser-media">
+                                                <a href="{{ this.permalink }}">
+                                                    <img src="{{ this.thumbnail }}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="teaser-bd">
+                                                <div class="teaser-bd-title">
+                                                    <h3>
+                                                        <a href="{{ this.permalink }}">{{ this.title }}</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="teaser-bd-date">
+                                                    {{ formatDate date }}
+                                                </div>
+                                                <div class="teaser-bd-excerpt">
+                                                    {{ this.excerpt }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/checkYear}}
+                            {{/each}}
+                        </div>
                     </div>
-                    <div class="section-bd">
-                        <ul class="blocks">
-                        {{#each collections.articles}}
-                            {{#checkYear ../archiveYear this.date}}
-                            <li>
-                                <div class="teaser">
-                                    <div class="teaser-media">
-                                        <a href="{{ this.permalink }}">
-                                            <img src="{{ this.thumbnail }}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="teaser-hd">
-                                        <a href="{{ this.permalink }}">
-                                            <h3>{{ this.title }}</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            {{/checkYear}}
-                        {{/each}}
-                        </ul>
+                    <div class="grid-col grid-col_sub">
+                        {{> sidebar}}
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 
 {{> footer}}

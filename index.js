@@ -11,16 +11,19 @@ var Metalsmith      = require('metalsmith'),
     sass            = require('metalsmith-sass'),
     uglify          = require('metalsmith-uglify'),
     Handlebars      = require('handlebars'),
+    Swag            = require('swag'),
     moment          = require('moment');
 
 // --------------------------------------
 // Handlebars
 // --------------------------------------
 
+Swag.registerHelpers(Handlebars);
+
 // date formatting helper that formats dates consistently using moment.js
 // usage: {{ formatDate date }}
 Handlebars.registerHelper('formatDate', function(date) {
-    return moment(date).format('MM-DD-YYYY');
+    return moment(date).format('MMM Do YYYY');
 });
 
 // year checking helper for use with listings that should be limited to a specific year
@@ -49,9 +52,10 @@ Handlebars.registerHelper('limit', function(context, limit) {
     } else {
         ret = options.inverse(this);
     }
-
+    console
     return ret;
 });
+
 
 // --------------------------------------
 // Metalsmith
@@ -72,7 +76,8 @@ Metalsmith(__dirname)
         directory: './templates',
         partials: {
             footer: "partials/footer",
-            header: "partials/header"
+            header: "partials/header",
+            sidebar: "partials/sidebar"
         }
     }))
     .use(permalinks())
