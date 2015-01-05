@@ -33,9 +33,6 @@
                             {{/limit}}
                         </div>
                     </div>
-                    <div class="grid-col grid-col_sub">
-                        {{> sidebar}}
-                    </div>
                 </div>
             </div>
         </div>

@@ -76,8 +76,7 @@ Metalsmith(__dirname)
         directory: './templates',
         partials: {
             footer: "partials/footer",
-            header: "partials/header",
-            sidebar: "partials/sidebar"
+            header: "partials/header"
         }
     }))
     .use(permalinks())

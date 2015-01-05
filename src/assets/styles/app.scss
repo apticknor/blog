@@ -159,7 +159,7 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-img, audio, canvas, video, picture {
+img, audio, canvas, video, picture, iframe, embed {
     max-width: 100% !important; // media should never overflows it's container
 }
 
@@ -347,12 +347,7 @@ a:focus {
     }
 
     .grid-col_main {
-        width: 71.8%;
-    }
-
-    .grid-col_sub {
-        width: calc(28.2% - #{$PAD_STANDARD});
-        margin-left: $PAD_STANDARD;
+        width: 100%;
     }
 }
 
@@ -374,7 +369,7 @@ a:focus {
            -moz-column-count: 2;
                 column-count: 2;
     }
-    @include breakpoint(XL) {
+    @include breakpoint(LG) {
         -webkit-column-count: 3;
            -moz-column-count: 3;
                 column-count: 3;
