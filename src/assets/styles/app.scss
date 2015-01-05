@@ -12,7 +12,6 @@ $COLOR_WHITE: #ffffff;
 $COLOR_LIGHT: #f6f3ee;
 $COLOR_GREY: #aeaeae;
 $COLOR_DARK:  #2d2d2d;
-$COLOR_ACCENT: #39839e;
 
 // fonts
 $FONT_FAMILY_SERIF: Georgia, "Times New Roman", Times, serif;
@@ -34,10 +33,11 @@ $FONT_SIZE_DEFAULT: $FONT_SIZE_SM;
 
 // line heights
 $LINE_HEIGHT_STANDARD: 1.4;
+$LINE_HEIGHT_EXPANDED: 1.6;
 
 // vertical rhythm
 $VR_CONDENSED: .7rem;
-$VR_STANDARD: 1.6rem;
+$VR_STANDARD: 1.2rem;
 $VR_EXPANDED: 1.8rem;
 
 // padding
@@ -309,10 +309,6 @@ a:focus {
     min-height: 20px; // a tier should always be visible
 }
 
-.tier_accent {
-    background-color: $COLOR_ACCENT;
-}
-
 .tier_dark {
     background-color: $COLOR_DARK;
 }
@@ -418,6 +414,13 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+ Container Module - Page Content
+------------------------------------------------------------------------ */
+.pageContent {
+    margin-bottom: $PAD_STANDARD;
+}
+
+/* ---------------------------------------------------------------------
  Content Module - Heading
 ------------------------------------------------------------------------ */
 .hdg {
@@ -455,8 +458,16 @@ a:focus {
 ------------------------------------------------------------------------ */
 .userContent {
 
+    font-size: $FONT_SIZE_DEFAULT;
+    line-height: $LINE_HEIGHT_EXPANDED;
+
     // keep long shit (like links and words) from creating horizontal scrollbars
     word-break: break-word;
+
+    // links
+    a {
+        text-decoration: underline;
+    }
 
     // headings
     h1,
@@ -500,7 +511,7 @@ a:focus {
         margin: 0 0 $VR_STANDARD 0;
         padding: $PAD_STANDARD;
         padding-left: $PAD_LARGE; // push the quote in a bit
-        border-left: 6px solid $COLOR_ACCENT;
+        border-left: 6px solid $COLOR_DARK;
         font-style: italic;
     }
 
