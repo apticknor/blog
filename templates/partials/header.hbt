@@ -23,14 +23,14 @@
                 <div class="masthead" role="banner">
                     <div class="masthead-logo">
                         <h1>
-                            <a href="/">&smashp; Anthony Ticknor</a>
+                            <a href="/">&#10803; Anthony Ticknor</a>
                         </h1>
                     </div>
                     <div class="masthead-nav" role="navigation">
                         <ul class="masthead-nav-list">
-                            <li><a href="/posts/">Blog</a></li>
+                            <!-- <li><a href="/posts/">Blog</a></li>
                             <li><a href="/portfolio/">Portfolio</a></li>
-                            <li><a href="/about/">About</a></li>
+                            <li><a href="/about/">About</a></li> -->
                         </ul>
                     </div>
                 </div>
