@@ -250,12 +250,12 @@ a:focus {
     padding: $PAD_STANDARD 0;
     text-align: center;
     line-height: $LINE_HEIGHT_STANDARD;
+    border-bottom: 1px solid $COLOR_DARK;
+    margin-bottom: 20px;
     @include breakpoint(LG) {
         text-align: left;
         display: table;
         width: 100%;
-        border-bottom: 1px solid $COLOR_DARK;
-        margin-bottom: 30px;
     }
 }
 
@@ -298,11 +298,7 @@ a:focus {
 
 .masthead-nav-list a {
     font-size: $FONT_SIZE_SM;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    @include breakpoint(LG) {
-        font-size: $FONT_SIZE_MD;
-    }
 }
 
 /* ---------------------------------------------------------------------
