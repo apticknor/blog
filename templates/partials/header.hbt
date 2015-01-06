@@ -22,9 +22,11 @@
             <div class="wrapper">
                 <div class="masthead" role="banner">
                     <div class="masthead-logo">
-                        <h1>
-                            <a href="/">&#10803; Anthony Ticknor</a>
-                        </h1>
+                        <a href="/" class="logo">
+                            <h1>
+                                 Anthony Ticknor
+                            </h1>
+                        </a>
                     </div>
                     <div class="masthead-nav" role="navigation">
                         <ul class="masthead-nav-list">
