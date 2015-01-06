@@ -26,7 +26,7 @@ Starting this week, I'd like to start including you in some of these challenges.
 
 ### Credits
 
-Originally posted on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-fed-rad-css/)
+This blog post originally appeared on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-fed-rad-css/)
 
 ----
 
