@@ -4,12 +4,25 @@
 
         <div class="tier">
             <div class="wrapper">
-                <div class="section">
-                    <div class="section-hd">
-                        <h2 class="hdg hdg_2">{{ title }}</h2>
-                    </div>
-                    <div class="section-bd">
-                        {{{ contents }}}
+                <div class="grid">
+                    <div class="grid-col grid-col_main">
+                        <div class="pageContent">
+                            <div class="teaser">
+                                <div class="teaser-media">
+                                    <img src="{{ image }}" alt="{{ title }}" />
+                                </div>
+                                <div class="teaser-bd">
+                                    <div class="teaser-bd-title">
+                                        <h2 class="hdg hdg_2">{{ title }}</h2>
+                                    </div>
+                                    <div class="teaser-bd-excerpt">
+                                        <div class="userContent">
+                                            {{{ contents }}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

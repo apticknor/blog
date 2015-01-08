@@ -19,5 +19,5 @@ After this experience, I'm definitely looking forward to working with Shopify ag
 ----
 
 <div class="attribution">
-Photography by Ashley Sullivan for Wilson & Willy's.
+Photograph by Ashley Sullivan for Wilson & Willy's.
 </div>
