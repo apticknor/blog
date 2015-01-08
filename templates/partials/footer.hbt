@@ -1,3 +1,36 @@
+        <div class="tier tier_opaque">
+            <div class="wrapper">
+                <div class="footer" role="contentinfo">
+                    <ul class="socialList">
+                        <li>
+                            <a href="https://twitter.com/apticknor">
+                                <img class="icn" src="/assets/images/icons/icn-twitter.svg" alt="Find me on Twitter" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/apticknor">
+                                <img class="icn" src="/assets/images/icons/icn-github.svg" alt="Find me on Github" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/apticknor">
+                                <img class="icn" src="/assets/images/icons/icn-dribbble.svg" alt="Find me on Dribbble" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/apticknor/">
+                                <img class="icn" src="/assets/images/icons/icn-instagram.svg" alt="Find me on Instagram" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/feed/">
+                                <img class="icn" src="/assets/images/icons/icn-rss.svg" alt="Subscribe to my RSS Feed" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
