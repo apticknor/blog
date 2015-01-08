@@ -1,7 +1,6 @@
 {{> header}}
 
     <div role="main">
-
         <div class="tier">
             <div class="wrapper">
                 <div class="grid">
@@ -27,7 +26,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 {{> footer}}
