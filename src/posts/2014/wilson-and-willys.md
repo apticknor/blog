@@ -14,10 +14,10 @@ Besides the online store, Wilson and Willy's will be opening a physical location
 
 Now on to the tech details! This site is built on top of [Shopify](http://www.shopify.com) and is a partially customized theme. It was my first chance to work with Shopify in close to two years and I was very pleased to see some of the updates they've made recently, especially the responsive checkout and addition of support for SASS.
 
-After this experience, I'm definitely looking forward to working Shopify them again.
+After this experience, I'm definitely looking forward to working with Shopify again in the future.
 
 ----
 
-### Credits
-
+<div class="attribution">
 Photography by Ashley Sullivan for Wilson & Willy's.
+</div>

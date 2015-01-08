@@ -12,6 +12,6 @@ Last week I was a guest on The Developer Download and talked about the nuts and 
 
 ----
 
-### Credits
-
+<div class="attribution">
 [The Developer Download](http://blog.nerdery.com/tag/developer-download/) is a podcast produced by [The Nerdery](http://www.nerdery.com) and hosted by Andrew Watson. 
+</div>

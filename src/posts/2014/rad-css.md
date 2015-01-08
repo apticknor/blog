@@ -24,12 +24,6 @@ Starting this week, I'd like to start including you in some of these challenges.
 
 ----
 
-### Credits
-
-This blog post originally appeared on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-fed-rad-css/)
-
-----
-
 ### Update
 
 Here are some great submissions I've received from my co-workers at The Nerdery.
@@ -37,3 +31,9 @@ Here are some great submissions I've received from my co-workers at The Nerdery.
 - [Pen by Martin Duran](http://codepen.io/Martin-Duran/full/ImJFg)
 - [Pen by Myron Schippers](http://codepen.io/chbymnky/full/dIwol)
 - [Pen by Megan McKinnon](http://codepen.io/mmckinnon/full/yzLDs)
+
+----
+
+<div class="attribution">
+This blog post originally appeared on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-fed-rad-css/)
+</div>
