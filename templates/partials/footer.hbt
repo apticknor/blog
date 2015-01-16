@@ -2,31 +2,13 @@
             <div class="wrapper">
                 <div class="footer" role="contentinfo">
                     <ul class="socialList">
+                        {{#each social}}
                         <li>
-                            <a href="{{ socialLinks.twitter }}">
-                                <img class="icn" src="/assets/images/icons/icn-twitter.svg" alt="Find me on Twitter" />
+                            <a href="{{ this.link }}">
+                                <img class="icn" src="{{ site.url }}{{ this.iconUrl }}" alt="{{ this.label }}" />
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ socialLinks.github }}">
-                                <img class="icn" src="{{ site.url }}/assets/images/icons/icn-github.svg" alt="Find me on Github" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ socialLinks.dribbble }}">
-                                <img class="icn" src="{{ site.url }}/assets/images/icons/icn-dribbble.svg" alt="Find me on Dribbble" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ socialLinks.instagram }}">
-                                <img class="icn" src="{{ site.url }}/assets/images/icons/icn-instagram.svg" alt="Find me on Instagram" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ socialLinks.feed }}">
-                                <img class="icn" src="{{ site.url }}/assets/images/icons/icn-rss.svg" alt="Subscribe to my RSS Feed" />
-                            </a>
-                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>

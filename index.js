@@ -75,12 +75,46 @@ Metalsmith(__dirname)
             author: 'Anthony Ticknor',
             description: 'Hi. I\'m Anthony Ticknor, a CSS aficionado, and a Technology Manager at The Nerdery. I\'m a big fan of making the web work for people regardless of who they are, where they are, or whatever device they have in front of them.'
         },
-        socialLinks: {
-            twitter: 'https://twitter.com/apticknor',
-            github: 'https://github.com/apticknor',
-            dribbble: 'https://dribbble.com/apticknor',
-            instagram: 'https://instagram.com/apticknor/',
-            feed: 'http://anthonyticknor.com/feed.xml'
+        primaryNav: {
+            blog: {
+                link: '/posts/',
+                label: 'Blog'
+            },
+            portfolio: {
+                link: '/portfolio/',
+                label: 'Portfolio'
+            },
+            about: {
+                link: '/about/',
+                label: 'About'
+            }
+        },
+        social: {
+            twitter: {
+                link: 'https://twitter.com/apticknor',
+                iconUrl: '/assets/images/icons/icn-twitter.svg',
+                label: 'Find me on Twitter'
+            },
+            github: {
+                link: 'https://github.com/apticknor',
+                iconUrl: '/assets/images/icons/icn-github.svg',
+                label: 'Find me on GitHub'
+            },
+            dribbble: {
+                link: 'https://dribbble.com/apticknor',
+                iconUrl: '/assets/images/icons/icn-dribbble.svg',
+                label: 'Find me on Dribbble'
+            },
+            instagram: {
+                link: 'https://instagram.com/apticknor/',
+                iconUrl: '/assets/images/icons/icn-github.svg',
+                label: 'Find me on Instagram'
+            },
+            feed: {
+                link: 'http://anthonyticknor.com/feed.xml',
+                iconUrl: '/assets/images/icons/icn-rss.svg',
+                label: 'Follow my RSS Feed'
+            }
         }
     }))
     .use(ignore([
