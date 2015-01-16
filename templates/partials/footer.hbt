@@ -23,7 +23,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/feed/">
+                            <a href="/feed.xml">
                                 <img class="icn" src="/assets/images/icons/icn-rss.svg" alt="Subscribe to my RSS Feed" />
                             </a>
                         </li>

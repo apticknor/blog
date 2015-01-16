@@ -7,6 +7,7 @@ var Metalsmith      = require('metalsmith'),
     markdown        = require('metalsmith-markdown'),
     templates       = require('metalsmith-templates'),
     collections     = require('metalsmith-collections'),
+    feed            = require('metalsmith-feed'),
     permalinks      = require('metalsmith-permalinks'),
     sass            = require('metalsmith-sass'),
     uglify          = require('metalsmith-uglify'),
@@ -61,6 +62,13 @@ Handlebars.registerHelper('limit', function(context, limit) {
 // Metalsmith
 // --------------------------------------
 Metalsmith(__dirname)
+    .metadata({
+        site: {
+            title: 'Anthony Ticknor',
+            url: 'http://anthonyticknor.com/',
+            author: 'Anthony Ticknor'
+        }
+    })
     .use(ignore([
         '_drafts/*'
     ]))
@@ -75,11 +83,16 @@ Metalsmith(__dirname)
         engine: 'handlebars',
         directory: './templates',
         partials: {
-            footer: "partials/footer",
-            header: "partials/header"
+            footer: 'partials/footer',
+            header: 'partials/header'
         }
     }))
     .use(permalinks())
+    .use(feed({
+        collection: 'articles',
+        limit: '20',
+        destination: 'feed.xml'
+    }))
     .use(sass({
         outputStyle: 'compressed'
     }))
