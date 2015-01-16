@@ -23,7 +23,7 @@ Swag.registerHelpers(Handlebars);
 
 // date formatting helper that formats dates consistently using moment.js
 // usage: {{ formatDate date }}
-Handlebars.registerHelper('formatDate', function(date) {
+Handlebars.registerHelper('formatDisplayDate', function(date) {
     return moment(date).format('MMM Do YYYY');
 });
 

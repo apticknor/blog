@@ -8,7 +8,7 @@
                         <div class="pageContent">
                             <div class="teaser">
                                 <div class="teaser-media">
-                                    <img src="{{ image }}" alt="{{ title }}" />
+                                    <img src="{{ site.url }}{{ image }}" alt="{{ title }}" />
                                 </div>
                                 <div class="teaser-bd">
                                     <div class="teaser-bd-title">

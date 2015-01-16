@@ -13,7 +13,7 @@
                                         <div class="teaser">
                                             <div class="teaser-media">
                                                 <a href="{{ this.permalink }}">
-                                                    <img src="{{ this.thumbnail }}" alt="" />
+                                                    <img src="{{ ../../site.url }}{{ this.thumbnail }}" alt="" />
                                                 </a>
                                             </div>
                                             <div class="teaser-bd">
@@ -23,7 +23,7 @@
                                                     </h3>
                                                 </div>
                                                 <div class="teaser-bd-date">
-                                                    {{ formatDate date }}
+                                                    {{ formatDisplayDate date }}
                                                 </div>
                                                 <div class="teaser-bd-excerpt">
                                                     {{ this.excerpt }}
