@@ -2,12 +2,12 @@
 // Setup
 // --------------------------------------
 var Metalsmith      = require('metalsmith'),
+    metaobject      = require('metalsmith-metaobject'),
     ignore          = require('metalsmith-ignore'),
     assets          = require('metalsmith-assets'),
     markdown        = require('metalsmith-markdown'),
     templates       = require('metalsmith-templates'),
     collections     = require('metalsmith-collections'),
-    feed            = require('metalsmith-feed'),
     permalinks      = require('metalsmith-permalinks'),
     sass            = require('metalsmith-sass'),
     uglify          = require('metalsmith-uglify'),
@@ -25,6 +25,12 @@ Swag.registerHelpers(Handlebars);
 // usage: {{ formatDate date }}
 Handlebars.registerHelper('formatDate', function(date) {
     return moment(date).format('MMM Do YYYY');
+});
+
+// date formatting helper that formats dates to rfc822 consistently using moment.js
+// usage: {{ rfc822date date }}
+Handlebars.registerHelper('rfc822date', function(date) {
+    return moment(date).format('ddd, DD MMM YYYY HH:mm:ss ZZ');
 });
 
 // year checking helper for use with listings that should be limited to a specific year
@@ -62,13 +68,21 @@ Handlebars.registerHelper('limit', function(context, limit) {
 // Metalsmith
 // --------------------------------------
 Metalsmith(__dirname)
-    .metadata({
+    .use(metaobject({
         site: {
+            url: 'http://anthonyticknor.com',
             title: 'Anthony Ticknor',
-            url: 'http://anthonyticknor.com/',
-            author: 'Anthony Ticknor'
+            author: 'Anthony Ticknor',
+            description: 'Hi. I\'m Anthony Ticknor, a CSS aficionado, and a Technology Manager at The Nerdery. I\'m a big fan of making the web work for people regardless of who they are, where they are, or whatever device they have in front of them.'
+        },
+        socialLinks: {
+            twitter: 'https://twitter.com/apticknor',
+            github: 'https://github.com/apticknor',
+            dribbble: 'https://dribbble.com/apticknor',
+            instagram: 'https://instagram.com/apticknor/',
+            feed: 'http://anthonyticknor.com/feed.xml'
         }
-    })
+    }))
     .use(ignore([
         '_drafts/*'
     ]))
@@ -88,11 +102,6 @@ Metalsmith(__dirname)
         }
     }))
     .use(permalinks())
-    .use(feed({
-        collection: 'articles',
-        limit: '20',
-        destination: 'feed.xml'
-    }))
     .use(sass({
         outputStyle: 'compressed'
     }))
