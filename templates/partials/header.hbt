@@ -22,7 +22,7 @@
             <div class="wrapper">
                 <div class="masthead" role="banner">
                     <div class="masthead-logo">
-                        <a href="/" class="logo">
+                        <a href="{{ site.url }}" class="logo">
                             <h1>
                                  {{ site.title }}
                             </h1>
@@ -33,7 +33,7 @@
                             <!--
                             {{#each primaryNav}}
                             <li>
-                                <a href="{{ this.link }}">
+                                <a href="{{ ../site.url }}{{ this.link }}">
                                     {{ this.label }}
                                 </a>
                             </li>

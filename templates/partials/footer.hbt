@@ -5,7 +5,7 @@
                         {{#each social}}
                         <li>
                             <a href="{{ this.link }}">
-                                <img class="icn" src="{{ site.url }}{{ this.iconUrl }}" alt="{{ this.label }}" />
+                                <img class="icn" src="{{ ../site.url }}{{ this.iconUrl }}" alt="{{ this.label }}" />
                             </a>
                         </li>
                         {{/each}}
