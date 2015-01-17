@@ -6,6 +6,7 @@ var Metalsmith      = require('metalsmith'),
     ignore          = require('metalsmith-ignore'),
     assets          = require('metalsmith-assets'),
     markdown        = require('metalsmith-markdown'),
+    metallic        = require('metalsmith-metallic'),
     templates       = require('metalsmith-templates'),
     collections     = require('metalsmith-collections'),
     permalinks      = require('metalsmith-permalinks'),
@@ -126,6 +127,7 @@ Metalsmith(__dirname)
             reverse: true
         }
     }))
+    .use(metallic())
     .use(markdown())
     .use(templates({
         engine: 'handlebars',
