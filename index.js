@@ -107,7 +107,7 @@ Metalsmith(__dirname)
             },
             instagram: {
                 link: 'https://instagram.com/apticknor/',
-                iconUrl: '/assets/images/icons/icn-github.svg',
+                iconUrl: '/assets/images/icons/icn-instagram.svg',
                 label: 'Find me on Instagram'
             },
             feed: {
