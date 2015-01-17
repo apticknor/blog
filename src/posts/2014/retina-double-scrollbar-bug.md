@@ -5,8 +5,8 @@ template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/retina-double-scrollbar-bug/"
 og_type: "article"
 date: 2014-03-24
-image: "/assets/images/desk.jpg"
-thumbnail: "/assets/images/desk_thumb.jpg"
+image: "/assets/images/_articles/2014/desk.jpg"
+thumbnail: "/assets/images/_articles/2014/desk_thumb.jpg"
 excerpt: "Today at work I bumped up against a double scrollbar bug in chrome. Check out the bug in action and see a reduced test case."
 ---
 
@@ -14,7 +14,7 @@ Today at work I bumped up against a particularly nasty bug. No it’s not a prob
 
 Here’s what I’m seeing.
 
-[![chrome displaying a double vertical scrollbar](/assets/images/double-scrollbar.png)](/assets/images/double-scrollbar.png)
+[![chrome displaying a double vertical scrollbar](/assets/images/_articles/2014/double-scrollbar.png)](/assets/images/_articles/2014/double-scrollbar.png)
 
 Notice the double vertical scrollbar.
 

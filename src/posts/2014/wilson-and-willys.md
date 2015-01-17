@@ -5,8 +5,8 @@ template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/wilson-and-willys/"
 og_type: "article"
 date: 2014-12-03
-image: "/assets/images/ww.jpg"
-thumbnail: "/assets/images/ww_thumb.jpg"
+image: "/assets/images/_articles/2014/ww.jpg"
+thumbnail: "/assets/images/_articles/2014/ww_thumb.jpg"
 excerpt: "I've spent the past couple of months helping out some new friends stand up a website for their passion project, Wilson and Willy's."
 ---
 I've spent the past couple of months helping out some new friends stand up a new website for their passion project, [Wilson and Willy's](http://wilsonandwillys.com/). As simply as I can put it, Wilson and Willy's believes in finding quality American manufacturers and providing you access to their goods.
