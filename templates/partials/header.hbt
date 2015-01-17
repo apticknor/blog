@@ -18,11 +18,11 @@
         {{#if image}}<meta property="og:image" content="{{ site.url }}{{ image }}" />{{/if}}
 
         <!-- STYLESHEETS -->
-        <link rel="stylesheet" media="screen and (min-width: 1em)" href="{{ site.url }}/assets/styles/app.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1em)" href="{{ site.url }}/assets/styles/app.css?v{{now '%Y%m%d%H%M%S'}}" />
 
         <!-- SCRIPTS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="{{ site.url }}/assets/scripts/app.min.js"></script>
+        <script src="{{ site.url }}/assets/scripts/app.min.js?v{{now '%Y%m%d%H%M%S'}}"></script>
 
     </head>
     <body>
