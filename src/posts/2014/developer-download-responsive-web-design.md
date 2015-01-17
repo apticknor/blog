@@ -3,6 +3,7 @@ title: "Developer Download: Nuts and Bolts of HTML and Responsive Design"
 collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/developer-download-responsive-web-design/"
+og_type: "article"
 date: 2014-03-03
 image: "/assets/images/developer-download.jpg"
 thumbnail: "/assets/images/developer-download_thumb.jpg"

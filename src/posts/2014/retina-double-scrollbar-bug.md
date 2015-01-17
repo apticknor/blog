@@ -3,6 +3,7 @@ title: "Retina Double Scrollbar Bug"
 collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/retina-double-scrollbar-bug/"
+og_type: "article"
 date: 2014-03-24
 image: "/assets/images/desk.jpg"
 thumbnail: "/assets/images/desk_thumb.jpg"

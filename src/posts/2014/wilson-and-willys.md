@@ -3,6 +3,7 @@ title: "Wilson & Willy's"
 collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/wilson-and-willys/"
+og_type: "article"
 date: 2014-12-03
 image: "/assets/images/ww.jpg"
 thumbnail: "/assets/images/ww_thumb.jpg"

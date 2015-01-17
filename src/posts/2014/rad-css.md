@@ -3,6 +3,7 @@ title: "Rad CSS"
 collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/rad-css/"
+og_type: "article"
 date: 2014-02-20
 image: "/assets/images/rad-css.jpg"
 thumbnail: "/assets/images/rad-css_thumb.jpg"
