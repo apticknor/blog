@@ -26,7 +26,6 @@ var TICKNOR = TICKNOR || {};
         init: function() {
             APP.$html
                 .addClass('js')
-                .removeClass('no-js');
         }
     };
 
