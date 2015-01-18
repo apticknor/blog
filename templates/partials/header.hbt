@@ -15,7 +15,7 @@
         <meta property="og:description" content="{{#if excerpt}}{{ excerpt }}{{else}}{{ site.description }}{{/if}}" />
         <meta property="og:url" content="{{ permalink }}" />
         <meta property="og:site_name" content="{{ site.title }}" />
-        {{#if image}}<meta property="og:image" content="{{ site.url }}{{ image }}" />{{/if}}
+        <meta property="og:image" content="{{ site.url }}{{#if thumbnail}}{{ thumbnail }}{{else}}{{ social.sharing.image_default }}{{/if}}" />
 
         <!-- STYLESHEETS -->
         <link rel="stylesheet" media="screen and (min-width: 1em)" href="{{ site.url }}/assets/styles/app.css?v{{now '%Y%m%d%H%M%S'}}" />

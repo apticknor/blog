@@ -91,6 +91,9 @@ Metalsmith(__dirname)
             }
         },
         social: {
+            sharing: {
+                image_default: '/assets/images/_interface/share_default.jpg'
+            },
             twitter: {
                 link: 'https://twitter.com/apticknor',
                 iconUrl: '/assets/images/_interface/icons/icn-twitter.svg',
