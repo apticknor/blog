@@ -94,30 +94,32 @@ Metalsmith(__dirname)
             sharing: {
                 image_default: '/assets/images/_interface/share_default.jpg'
             },
-            twitter: {
-                link: 'https://twitter.com/apticknor',
-                iconUrl: '/assets/images/_interface/icons/icn-twitter.svg',
-                label: 'Find me on Twitter'
-            },
-            github: {
-                link: 'https://github.com/apticknor',
-                iconUrl: '/assets/images/_interface/icons/icn-github.svg',
-                label: 'Find me on GitHub'
-            },
-            dribbble: {
-                link: 'https://dribbble.com/apticknor',
-                iconUrl: '/assets/images/_interface/icons/icn-dribbble.svg',
-                label: 'Find me on Dribbble'
-            },
-            instagram: {
-                link: 'https://instagram.com/apticknor/',
-                iconUrl: '/assets/images/_interface/icons/icn-instagram.svg',
-                label: 'Find me on Instagram'
-            },
-            feed: {
-                link: 'http://anthonyticknor.com/feed.xml',
-                iconUrl: '/assets/images/_interface/icons/icn-rss.svg',
-                label: 'Follow my RSS Feed'
+            networks: {
+                twitter: {
+                    link: 'https://twitter.com/apticknor',
+                    iconUrl: '/assets/images/_interface/icons/icn-twitter.svg',
+                    label: 'Find me on Twitter'
+                },
+                github: {
+                    link: 'https://github.com/apticknor',
+                    iconUrl: '/assets/images/_interface/icons/icn-github.svg',
+                    label: 'Find me on GitHub'
+                },
+                dribbble: {
+                    link: 'https://dribbble.com/apticknor',
+                    iconUrl: '/assets/images/_interface/icons/icn-dribbble.svg',
+                    label: 'Find me on Dribbble'
+                },
+                instagram: {
+                    link: 'https://instagram.com/apticknor/',
+                    iconUrl: '/assets/images/_interface/icons/icn-instagram.svg',
+                    label: 'Find me on Instagram'
+                },
+                feed: {
+                    link: 'http://anthonyticknor.com/feed.xml',
+                    iconUrl: '/assets/images/_interface/icons/icn-rss.svg',
+                    label: 'Follow my RSS Feed'
+                }
             }
         }
     }))

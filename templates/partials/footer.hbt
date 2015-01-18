@@ -2,7 +2,7 @@
             <div class="wrapper">
                 <div class="footer" role="contentinfo">
                     <ul class="socialList">
-                        {{#each social}}
+                        {{#each social.networks}}
                         <li>
                             <a href="{{ this.link }}">
                                 <img class="icn" src="{{ ../site.url }}{{ this.iconUrl }}" alt="{{ this.label }}" />
