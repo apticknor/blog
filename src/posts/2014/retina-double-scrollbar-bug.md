@@ -4,7 +4,7 @@ collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/retina-double-scrollbar-bug/"
 og_type: "article"
-date: 2014-03-24
+date: 2014-03-24 20:31
 image: "/assets/images/_articles/2014/desk.jpg"
 thumbnail: "/assets/images/_articles/2014/desk_thumb.jpg"
 excerpt: "Today at work I bumped up against a double scrollbar bug in chrome. Check out the bug in action and see a reduced test case."

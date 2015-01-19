@@ -4,7 +4,7 @@ collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2015/commit-this-to-memory/"
 og_type: "article"
-date: 2015-01-18
+date: 2015-01-18 23:27
 image: "/assets/images/_articles/2015/cttm.jpg"
 thumbnail: "/assets/images/_articles/2015/cttm_thumb.jpg"
 excerpt: "Last night I went to the Varsity Theater to see one of my favorite bands."

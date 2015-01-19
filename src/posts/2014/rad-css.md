@@ -4,7 +4,7 @@ collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/rad-css/"
 og_type: "article"
-date: 2014-02-20
+date: 2014-02-20 10:30
 image: "/assets/images/_articles/2014/rad-css.jpg"
 thumbnail: "/assets/images/_articles/2014/rad-css_thumb.jpg"
 excerpt: "In 1986, the movie RAD was released, and my life was never really the same. I must've watched Cru Jones ride Helltrack a thousand times."

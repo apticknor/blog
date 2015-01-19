@@ -4,7 +4,7 @@ collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/developer-download-responsive-web-design/"
 og_type: "article"
-date: 2014-03-03
+date: 2014-03-03 22:21
 image: "/assets/images/_articles/2014/developer-download.jpg"
 thumbnail: "/assets/images/_articles/2014/developer-download_thumb.jpg"
 excerpt: "Last week I was a guest on The Developer Download and talked about the nuts and bolts of responsive design with fellow guests Jason Dicks and Anthony Lukes."

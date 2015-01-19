@@ -4,7 +4,7 @@ collection: articles
 template: post.hbt
 permalink: "http://anthonyticknor.com/posts/2014/wilson-and-willys/"
 og_type: "article"
-date: 2014-12-03
+date: 2014-12-03 22:20
 image: "/assets/images/_articles/2014/ww.jpg"
 thumbnail: "/assets/images/_articles/2014/ww_thumb.jpg"
 excerpt: "I've spent the past couple of months helping out some new friends stand up a website for their passion project, Wilson and Willy's."
