@@ -1,0 +1,15 @@
+{
+    "posts" : {
+        {{#each collections.articles}}
+        {{#if @index}}, {{/if}}
+        "article" : {
+            "title": "{{ this.title }}",
+            "permalink" : "{{ this.permalink }}",
+            "date" : "{{ formatDisplayDate this.date }}",
+            "image" : "{{ ../site.url }}{{ this.thumbnail }}",
+            "thumbnail" : "{{ ../site.url }}{{ this.image }}",
+            "excerpt" : "{{ this.excerpt }}"
+        }
+        {{/each}}
+    }
+}
