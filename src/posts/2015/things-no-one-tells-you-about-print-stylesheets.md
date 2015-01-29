@@ -26,15 +26,15 @@ A better approach is to ensure there is no critical content contained in backgro
 
 ## Printers don't have white ink
 
-Another important tidbit to remember is that printers don't have white ink. Let me say that again. Printers don't have white ink.
+Another important tidbit to remember is that printers don't have white ink. Let me say that one more time to help drive the point home. Printers don't have white ink.
 
-Many modern sites have large hero images with white text laid over the top and clients expect them to print this way. But from the printers point of view, it would need to print the image and then the white text over the top. Note this is only a problem with live text. A jpg that has an image with text composited over the top will be translated by the printer properly.
+Many modern sites have large hero images with white text laid over the top. Clients expect these images to print this way. But from the printers point of view, this isn't possible. A printer would need to print the image and then the white text over the top (requiring white ink and a second pass). Note this is only a problem with live text. Any image format such as as jpg that includes text as part of it will be translated by the printer properly.
 
 A better approach is to not position the text over the image in the first place and instead include it as a caption below the image. Trust me when I say if you don't set this expectation up front, your client will be expecting a beautiful image with text over the top and things are going to get awkward.
 
 ## The types and capabilities of printers are diverse
 
-From color fidelity & accuracy, to pixel density, to paper size & quality, and even ink levels, there's no good way to know what type of environment your content and styles are going to be created in. There's not even a way to detect these unknowns. You simply have to live with them.
+From color fidelity & accuracy, to pixel density, to paper size & quality, and even ink levels, there's no good way to know what type of environment your content and styles are going to be printed in. There's not even a way to detect these unknowns. You simply have to live with them.
 
 Because of this, your best bet is always worry about the content first, then keep print styles simple and high contrast. 
 
