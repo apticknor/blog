@@ -14,7 +14,9 @@ Last night I went to the [Varsity Theater](http://varsitytheater.org/) to see on
 
 Midway through the performance of the last song on the album, "Hold Me Down", I looked around and saw a thousand people singing in unison and covered in confetti. In that exact moment none of them cared about anything other than the experience right in front of their face. Bills were forgotten. Youth was rediscovered. Time was suspended. And everyone had looked up from their phones to pay attention to five humans making beautiful noise and being genuine.
 
-The world needs more experiences like this.
+With the knowledge of all humanity at our fingertips, success in the future will be measured by how long you can hold someone's attention before they shift to another app, another band, another whatever.
+
+The world needs more experiences like last night.
 
 ----
 
