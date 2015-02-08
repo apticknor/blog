@@ -10,7 +10,7 @@
                                 <div class="teaser-media">
                                     <img src="{{ site.url }}{{ image }}" alt="{{ title }}" />
                                 </div>
-                                <div class="teaser-bd">
+                                <div class="teaser-bd teaser-bd_wide">
                                     <div class="teaser-bd-title">
                                         <h2 class="hdg hdg_2">{{ title }}</h2>
                                     </div>

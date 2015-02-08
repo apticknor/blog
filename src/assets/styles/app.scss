@@ -44,6 +44,7 @@ $VR_EXPANDED: 1.8rem;
 // padding
 $PAD_SMALL: 14px;
 $PAD_STANDARD: 20px;
+$PAD_PLUS: 32px;
 $PAD_LARGE: 40px;
 
 // mediaqueries / breakpoints
@@ -424,6 +425,12 @@ a:focus {
     padding: $PAD_SMALL $PAD_STANDARD;
 }
 
+.teaser-bd_wide {
+    @include breakpoint(MD) {
+        padding: $PAD_PLUS;
+    }
+}
+
 .teaser-bd-title {
     margin-bottom: $VR_CONDENSED;
     font-size: $FONT_SIZE_SM;
@@ -441,6 +448,9 @@ a:focus {
 
 .teaser-ft {
     padding: $PAD_SMALL $PAD_STANDARD;
+    @include breakpoint(MD) {
+        padding: $PAD_PLUS;
+    }
 }
 
 /* ---------------------------------------------------------------------
