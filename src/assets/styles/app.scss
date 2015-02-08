@@ -415,6 +415,10 @@ a:focus {
     box-shadow: 0 2px 4px -2px rgba($COLOR_DARK,.15);
 }
 
+.teaser + .teaser {
+    margin-top: $PAD_STANDARD;
+}
+
 .teaser-media img {
     display: block; // remove extra whitespace below image
     width: 100%;  // required for use within CSS columns in Firefox
@@ -446,18 +450,14 @@ a:focus {
     font-size: $FONT_SIZE_XS;
 }
 
-.teaser-ft {
-    padding: $PAD_SMALL $PAD_STANDARD;
-    @include breakpoint(MD) {
-        padding: $PAD_PLUS;
-    }
-}
-
 /* ---------------------------------------------------------------------
  Container Module - Page Content
 ------------------------------------------------------------------------ */
 .pageContent {
     margin-bottom: $PAD_STANDARD;
+    @include breakpoint(MD) {
+        margin-bottom: $PAD_LARGE;
+    }
 }
 
 /* ---------------------------------------------------------------------
