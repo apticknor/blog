@@ -11,8 +11,6 @@ excerpt: "Last week I was a guest on The Developer Download and talked about the
 ---
 Last week I was a guest on The Developer Download and talked about the nuts and bolts of responsive design with fellow guests Jason Dicks and Anthony Lukes. We talked about RWD technical basics as well as more advanced topics like picturefill, RESS, frameworks, and iterative workflows. Have a listen (and a look) on [YouTube](https://www.youtube.com/watch?v=i1KLCBlj3n0) or the [Nerdery Blog](http://blog.nerdery.com/2014/01/nerdcast-78-developer-download-nuts-bolts-html-responsive-design/).
 
-----
-
 <div class="attribution">
 [The Developer Download](http://blog.nerdery.com/tag/developer-download/) is a podcast produced by [The Nerdery](http://www.nerdery.com) and hosted by Andrew Watson. 
 </div>

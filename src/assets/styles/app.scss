@@ -439,6 +439,10 @@ a:focus {
     font-size: $FONT_SIZE_XS;
 }
 
+.teaser-ft {
+    padding: $PAD_SMALL $PAD_STANDARD;
+}
+
 /* ---------------------------------------------------------------------
  Container Module - Page Content
 ------------------------------------------------------------------------ */
@@ -504,6 +508,8 @@ a:focus {
 .attribution {
     font-style: italic;
     font-size: $FONT_SIZE_XS;
+    background-color: $COLOR_OFFWHITE;
+    padding: $PAD_SMALL;
 }
 
 /* ---------------------------------------------------------------------

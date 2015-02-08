@@ -34,8 +34,6 @@ The short term solution for this bug is to simply avoid the negative `z-index` o
 
 I’ve reported the issue and would appreciate any other comments (or a star) at https://code.google.com/p/chromium/issues/detail?id=355709
 
-----
-
 ### Update
 
 AS of Chrome 37 this bug is no longer reproducible.

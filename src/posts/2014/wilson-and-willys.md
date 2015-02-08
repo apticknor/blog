@@ -17,8 +17,6 @@ Now on to the tech details! This site is built on top of [Shopify](http://www.sh
 
 After this experience, I'm definitely looking forward to working with Shopify again in the future.
 
-----
-
 <div class="attribution">
 Photograph by Ashley Sullivan for Wilson & Willy's.
 </div>

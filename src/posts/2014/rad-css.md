@@ -23,8 +23,6 @@ In the last few months I've seen my coworkers do some crazy things like [carve p
 
 Starting this week, I'd like to start including you in some of these challenges. As you may have noticed, I'm pretty enamored with the movie RAD. This week's challenge is to draw a bicycle using CSS and make it appear as if it's moving. Extra special bonus points if you can animate it to perform a backflip. Good luck, and may all your BMX racing dreams come true.
 
-----
-
 ### Update
 
 Here are some great submissions I've received from my co-workers at The Nerdery.
@@ -32,8 +30,6 @@ Here are some great submissions I've received from my co-workers at The Nerdery.
 - [Pen by Martin Duran](http://codepen.io/Martin-Duran/full/ImJFg)
 - [Pen by Myron Schippers](http://codepen.io/chbymnky/full/dIwol)
 - [Pen by Megan McKinnon](http://codepen.io/mmckinnon/full/yzLDs)
-
-----
 
 <div class="attribution">
 This blog post originally appeared on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-fed-rad-css/)
