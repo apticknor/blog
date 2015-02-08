@@ -44,6 +44,8 @@ Lastly, always actually print the pages to various printers using different pape
 
 Getting print stylesheets right doesn't have to be hard if you take the time to set expectations up front, and focus on delivering the content in an easy to read format.
 
+### Notes
+
 <div class="attribution">
 ['Printer' photograph by Daniel Foster](https://www.flickr.com/photos/danielfoster/5857102223/) and licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic](https://creativecommons.org/licenses/by-nc-sa/2.0/). 
 </div>

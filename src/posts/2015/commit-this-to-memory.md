@@ -18,6 +18,8 @@ With the knowledge of all humanity at our fingertips, success in the future will
 
 The world needs more experiences like last night.
 
+### Notes
+
 <div class="attribution">
 [Photograph by Unknown for Motion City Soundtrack](https://twitter.com/MotionCityMusic/status/556694409350496256/photo/1). 
 </div>

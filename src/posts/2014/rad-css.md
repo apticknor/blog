@@ -31,6 +31,8 @@ Here are some great submissions I've received from my co-workers at The Nerdery.
 - [Pen by Myron Schippers](http://codepen.io/chbymnky/full/dIwol)
 - [Pen by Megan McKinnon](http://codepen.io/mmckinnon/full/yzLDs)
 
+### Notes
+
 <div class="attribution">
 This blog post originally appeared on [The Nerdery Blog](http://blog.nerdery.com/2014/02/better-fed-rad-css/)
 </div>
