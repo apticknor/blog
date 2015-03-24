@@ -7,7 +7,7 @@
                     <div class="grid-col grid-col_main">
                         <h2 class="isVisuallyHidden">Recent Blog Posts</h2>
                         <div class="pods">
-                            {{#limit collections.articles 12}}
+                            {{#limit collections.articles 6}}
                                 <div class="pods-item">
                                     <div class="teaser">
                                         <div class="teaser-media">
